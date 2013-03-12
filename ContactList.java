@@ -27,33 +27,34 @@ public class ContactList { // KZ.
 	/*
 	 * Method to read Contact objects from saved file and add to
 	 * contactArrayList() -VP, EM
-	 * "METHOD readFile: Create ArrayList w/ ArrayList"
+	 * "METHOD readFile: Read Contact objects from saved file and add to contactArrayList()"
 	 * "Read data from file into ArrayList"
 	 */
 	public void readFile() { // KZ. VINCENT
-		System.out.println("METHOD readFile: Create ArrayList w/ ArrayList");
+		System.out.println("METHOD readFile: Read Contact objects from saved file and add to contactArrayList()");
 		// Class ArrayList has a method that finds the next empty spot for data
 	}
 
 	/*
 	 * Method to save Contact objects to file from contactArrayList[] -VP
-	 * "METHOD writeFile: Write data from file into ArrayList"
+	 * "METHOD writeFile: Write Contact object data from ArrayList to file"
 	 */
 	public void writeFile() { // KZ. VINCENT
-		System.out.println("METHOD writeFile: Write data from file into ArrayList");
+		System.out.println("METHOD writeFile: Write Contact object data from ArrayList to file");
 	}
 
 	/*
 	 * Method to call createContact() from Contact class to create new contact
 	 * -VP - KZ 
-	 * "METHOD newContact: Call contact and create new/single contact"
-	 * *** Why is this method necessary when we have createContact in Contact?
-	 * *** Will it add the new contact to the ArrayList or something? Why couldn't
-	 * *** that be done in createContact?
+	 * "METHOD newContact: (1) Call createContact to create a single contact. (2) Add info to ArrayList."
+	 * ******Tentatiive plausibility test: 
+	 * (1) create a new Contact object (eg, testCC) in newContact() 
+	 * (2) fill testCC w/ data
+	 * (3) add testCC to contactArrayList()
 	 * -EM
 	 */
 	public void newContact() { // KZ. Vincent
-		System.out.println("METHOD newContact: Call contact and create new/single contact");
+		System.out.println("METHOD newContact: (1) Call createContact to create a single contact. (2) Add info to ArrayList.");
 	}
 	
 	/*
