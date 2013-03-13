@@ -25,21 +25,33 @@ public class ContactList { // KZ.
 	}
 
 	/*
-	 * Method to read Contact objects from saved file and add to
-	 * contactArrayList() -VP, EM
-	 * "METHOD readFile: Read Contact objects from saved file and add to contactArrayList()"
-	 * "Read data from file into ArrayList"
+	 * Method to read Contact objects from saved file and add to contactArrayList -VP, EM
 	 */
-	public void readFile() { // KZ. VINCENT
-		System.out.println("METHOD readFile: Read Contact objects from saved file and add to contactArrayList()");
+	public void readFile() throws IOException, ClassNotFoundException { // KZ. VINCENT
+		//FIS-OIS for reading files
+		FileInputStream fis = new FileInputStream("file.sav");
+        ObjectInputStream ois = new ObjectInputStream(fis);
+        
+        //for loop to read Contact objects from file and add to contactArrayList
+        for (int i=0; i<fis.available();i++) {               //fis.availible() is an int value of remaining bytes that can be read
+        	contactArrayList.add((Contact)ois.readObject());
+        }
+        ois.close(); //done with reading; close ois
 	}
 
 	/*
-	 * Method to save Contact objects to file from contactArrayList[] -VP
-	 * "METHOD writeFile: Write Contact object data from ArrayList to file"
+	 * Method to save Contact objects to file from contactArrayList -VP
 	 */
-	public void writeFile() { // KZ. VINCENT
-		System.out.println("METHOD writeFile: Write Contact object data from ArrayList to file");
+	public void writeFile() throws IOException { // KZ. VINCENT
+		//FOS-OOS for writing files
+    	FileOutputStream fos = new FileOutputStream("file.sav");
+        ObjectOutputStream oos = new ObjectOutputStream(fos);
+		
+        //for loop to write contact objects to file from contactArrayList
+		for (int i=0; i<contactArrayList.size(); i++) {
+			oos.writeObject(contactArrayList.get(i));
+        }
+		oos.close(); //done writing; close oos
 	}
 
 	/*
