@@ -32,7 +32,6 @@ public class ContactList { // KZ.
 	 */
 	public void readFile() { // KZ. VINCENT
 		System.out.println("METHOD readFile: Read Contact objects from saved file and add to contactArrayList()");
-		// Class ArrayList has a method that finds the next empty spot for data
 	}
 
 	/*
