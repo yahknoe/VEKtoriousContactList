@@ -22,7 +22,7 @@ public class TestContactList { // KZ.
 		demoContactList.menu(); // KZ. call main menu, displays menu options
 
 		// MENU OPTIONS -- For demonstration purposes only
-		demoContact.createContact(); // EM
+		demoContact.readContact(); // EM
 		System.out.println(demoContact.printSingleContact()); // EM
 
 		demoContactList.newContact(); // KZ.
@@ -41,7 +41,7 @@ OUR OUTPUT:
 
 METHOD readFile: Create ArrayList w/ ArrayList
 METHOD menu: Output Menu and scan for Menu Options
-METHOD createContact scans/reads input from user and create a single contact
+METHOD readContact scans/reads input from user and create a single contact
       ~ Method setLastName: Set lastName
       ~ Method setFirstName: Set firstName
       ~ Method setStreet: Set street
