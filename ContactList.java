@@ -44,9 +44,9 @@ public class ContactList { // KZ.
 	}
 
 	/*
-	 * Method to call createContact() from Contact class to create new contact
+	 * Method to call readContact() from Contact class to create new contact
 	 * -VP - KZ 
-	 * "METHOD newContact: (1) Call createContact to create a single contact. (2) Add info to ArrayList."
+	 * "METHOD newContact: (1) Call readContact() to create a single contact. (2) Add info to contactArrayList."
 	 * ******Tentatiive plausibility test: 
 	 * (1) create a new Contact object (eg, testCC) in newContact() 
 	 * (2) fill testCC w/ data
@@ -54,7 +54,7 @@ public class ContactList { // KZ.
 	 * -EM
 	 */
 	public void newContact() { // KZ. Vincent
-		System.out.println("METHOD newContact: (1) Call createContact to create a single contact. (2) Add info to ArrayList.");
+		System.out.println("METHOD newContact: (1) Call readContact() to create a single contact. (2) Add info to contactArrayList.");
 	}
 	
 	/*
