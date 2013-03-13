@@ -17,16 +17,17 @@ public class Contact { // KZ.
 	private String email;
 	private String phone;
 	private String notes;
-	private String key;         //key for sorting Contacts EM
+	private String key;         //key for sorting Contacts (maybe put in static block?) -EM
 	
 	/*
-	 * Method to create a single contact and set values
-	 * "METHOD createContact scans/reads input from user and create a single contact"
+	 * Method to read input info from user to set private variable info for a single Contact object
+	 * readContact does not create a Contact object. It lets the program user enter the object's values.
+	 * "METHOD readContact scans/reads input from user to set private variable info for a single Contact object"
 	 * "uses printSingleContact to output to console"
-	 * "   ~METHOD sets whole contact at once"
+	 * "   ~METHOD sets all private variable info at once"
 	 */
-	public void createContact () {	 // KZ. 
-		System.out.println("METHOD createContact scans/reads input from user and create a single contact");
+	public void readContact () {	 // KZ. 
+		System.out.println("METHOD readContact scans/reads input from user to set private variable info for a single Contact object");
 		setLastName("last");
 		setFirstName("first");
 		setStreet("street");
@@ -218,3 +219,5 @@ public class Contact { // KZ.
         return key;
     }
 }
+
+
