@@ -30,13 +30,13 @@ public class ContactList { // KZ.
 	public void readFile() throws IOException, ClassNotFoundException { // KZ. VINCENT
 		//FIS-OIS for reading files
 		FileInputStream fis = new FileInputStream("file.sav");
-        ObjectInputStream ois = new ObjectInputStream(fis);
-        
-        //for loop to read Contact objects from file and add to contactArrayList
-        for (int i=0; i<fis.available();i++) {               //fis.availible() is an int value of remaining bytes that can be read
-        	contactArrayList.add((Contact)ois.readObject());
-        }
-        ois.close(); //done with reading; close ois
+	        ObjectInputStream ois = new ObjectInputStream(fis);
+	        
+	        //for loop to read Contact objects from file and add to contactArrayList
+	        for (int i=0; i<fis.available();i++) {               //fis.availible() is an int value of remaining bytes that can be read
+	        	contactArrayList.add((Contact)ois.readObject());
+	        }
+	        ois.close(); //done with reading; close ois
 	}
 
 	/*
@@ -44,13 +44,13 @@ public class ContactList { // KZ.
 	 */
 	public void writeFile() throws IOException { // KZ. VINCENT
 		//FOS-OOS for writing files
-    	FileOutputStream fos = new FileOutputStream("file.sav");
-        ObjectOutputStream oos = new ObjectOutputStream(fos);
-		
-        //for loop to write contact objects to file from contactArrayList
+	    	FileOutputStream fos = new FileOutputStream("file.sav");
+	        ObjectOutputStream oos = new ObjectOutputStream(fos);
+			
+	        //for loop to write contact objects to file from contactArrayList
 		for (int i=0; i<contactArrayList.size(); i++) {
 			oos.writeObject(contactArrayList.get(i));
-        }
+	       	}
 		oos.close(); //done writing; close oos
 	}
 
