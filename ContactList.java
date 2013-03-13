@@ -88,16 +88,14 @@ public class ContactList { // KZ.
 	/*
 	 * [GOAL] Method to retrieve contact with matching last name and print to
 	 * console or return error if none match 
-	 * [STEP 1] Sort list if not done 
-	 * [STEP 2] Search for matching last name 
-	 * [STEP 3] Return matching contact(s) OR return error 
-	 * [STEP 4] Print selected contact(s) from main -EM
+	 * [STEP 1] Search for matching last name 
+	 * [STEP 2] Return matching contact(s) OR return error 
+	 * [STEP 3] Print selected contact(s) from main -EM
 	 * 
 	 * "METHOD retrieveLastName: Retrieve contact(s) with matching last name & print to console or return error if none match"
-	 * "1. Call METHOD sortContact() to sort list in alphabetical order"
-	 * "2. Search for matching last name"
-	 * "3. Return matching contact(s) OR return error"
-	 * "4. Call System.out.println(retrieveLastName()) or similar from main to print to console"
+	 * "1. Search for matching last name"
+	 * "2. Return matching contact(s) OR return error"
+	 * "3. Call System.out.println(retrieveLastName()) or similar from main to print to console"
 	 */
 	public void retrieveLastName() { // KZ, EM
 		System.out.println("METHOD retrieveLastName: Retrieve contact(s) with matching last name & print to console or return error if none match");
@@ -107,10 +105,9 @@ public class ContactList { // KZ.
 	 * [GOAL] Method to retrieve contact by email and print to console or return
 	 * error if none match -EM
 	 * "METHOD retrieveEmail: Retrieve contact(s) with matching email & print to console or return error if none match"
-	 * "1. Call METHOD sortContact() to sort list in alphabetical order"
-	 * "2. Search for matching email"
-	 * "3. Return matching contact(s) OR return error"
-	 * "4. Call System.out.println(retrieveEmail()) or similar from main to print to console"
+	 * "1. Search for matching email"
+	 * "2. Return matching contact(s) OR return error"
+	 * "3. Call System.out.println(retrieveEmail()) or similar from main to print to console"
 	 */
 	public void retrieveEmail() { // KZ, EM
 		System.out.println("METHOD retrieveEmail: Retrieve contact(s) with matching email & print to console or return error if none match");
@@ -120,10 +117,9 @@ public class ContactList { // KZ.
 	 * [GOAL] Method to retrieve contact by zip and print to console or return
 	 * error if none match -EM
 	 * "METHOD retrieveEmail: Retrieve contact(s) with matching zip & print to console or return error if none match"
-	 * "1. Call METHOD sortContact() to sort list in alphabetical order"
-	 * "2. Search for matching zip"
-	 * "3. Return matching contact(s) OR return error"
-	 * "4. Call System.out.println(retrieveZip()) or similar from main to print to console"
+	 * "1. Search for matching zip"
+	 * "2. Return matching contact(s) OR return error"
+	 * "3. Call System.out.println(retrieveZip()) or similar from main to print to console"
 	 */
 	public void retrieveZip() { // KZ, EM
 		System.out.println("METHOD retrieveZip: Retrieve contact(s) with matching zip & print to console or return error if none match");
