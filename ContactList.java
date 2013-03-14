@@ -46,8 +46,7 @@ public class ContactList { // KZ.
 			do	{
 				System.out.println ("You have entered an invalid choice. Please re-enter your menu choice");
 				menuChoice = scanner.nextInt();
-			} while (menuChoice <= 6 ||
-					menuChoice >= 1);
+			} while (menuChoice < 1 && menuChoice > 6 );
 			
 			switch (menuChoice)	{
 			case 1: System.out.println ("Choice new");
