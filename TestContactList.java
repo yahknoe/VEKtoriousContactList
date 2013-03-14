@@ -6,7 +6,7 @@ public class TestContactList { // KZ.
 	/*
 	 * ---------- MAIN ----------
 	 */
-	public static void main(String[] args) throws ClassNotFoundException, IOException { // KZ.
+	public static void main(String[] args) { // KZ.
 
 		// create new objects to call non-static methods from
 		// ContactList & Contact classes -EM
@@ -25,7 +25,6 @@ public class TestContactList { // KZ.
 		demoContact.readContact(); // EM
 		System.out.println(demoContact.printSingleContact()); // EM
 
-		demoContactList.newContact(); // KZ.
 		demoContactList.printList(); // KZ.
 		demoContactList.retrieveLastName(); // KZ.
 		demoContactList.retrieveEmail(); // KZ.
