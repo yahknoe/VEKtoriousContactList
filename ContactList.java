@@ -38,45 +38,40 @@ public class ContactList { // KZ.
 
 		int menuChoice = 0;
 		Scanner scanner = new Scanner (System.in);
-		menuChoice = scanner.nextInt();
+		// menuChoice = scanner.nextInt();
 
 		try	{
-
+			System.out.println("inside try");
 			menuChoice = scanner.nextInt();
+			do	{
+				System.out.println ("You have entered an invalid choice. Please re-enter your menu choice");
+				menuChoice = scanner.nextInt();
+			} while (menuChoice <= 6 ||
+					menuChoice >= 1);
+			
+			switch (menuChoice)	{
+			case 1: System.out.println ("Choice new");
+			break;
+			case 2: System.out.println ("Choice print");
+			break;
+			case 3: System.out.println ("Choice last");
+			break;
+			case 4: System.out.println ("Choice email");
+			break;
+			case 5: System.out.println ("Choice zip");
+			break;
+			case 6: System.out.println ("Choice quit");
+			break;
+			default: System.out.println  ("Choice WHAT IS / DO WE NEED DEFAULT??");
+			break;
+			}
 
 		} catch (InputMismatchException e)	{
-
+			System.out.println("inside catch");
 			System.out.println ("You have entered an invalid choice. Please re-enter your menu choice using digits only.");
 			menuChoice = scanner.nextInt();
 		}
 
-		do	{
-			System.out.println ("You have entered an invalid choice. Please re-enter your menu choice");
-			menuChoice = scanner.nextInt();
-
-		} while (menuChoice != 1 || 
-		menuChoice != 2 || 
-		menuChoice != 3 || 
-		menuChoice != 4 || 
-		menuChoice != 5 || 
-		menuChoice != 6);
-
-		switch (menuChoice)	{
-		case 1: System.out.println ("Choice new");
-		break;
-		case 2: System.out.println ("Choice print");
-		break;
-		case 3: System.out.println ("Choice last");
-		break;
-		case 4: System.out.println ("Choice email");
-		break;
-		case 5: System.out.println ("Choice zip");
-		break;
-		case 6: System.out.println ("Choice quit");
-		break;
-		default: System.out.println  ("Choice WHAT IS / DO WE NEED DEFAULT??");
-		break;
-		}
 	}
 	/*
 	 * Method to read Contact objects from saved file and add to
