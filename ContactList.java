@@ -91,19 +91,11 @@ public class ContactList { // KZ.
 	}
 
 	/*
-	 * Method to call readContact() from Contact class to create new contact
-	 * -VP - KZ 
-	 * "METHOD newContact: (1) Call readContact() to create a single contact. (2) Add info to contactArrayList."
-	 * ******Tentatiive plausibility test: 
-	 * (1) create a new Contact object (eg, testCC) in newContact() 
-	 * (2) fill testCC w/ data
-	 * (3) add testCC to contactArrayList()
-	 * -EM
+	 * Adds Contact object to contactArrayList
 	 */
-	public void newContact() { // KZ. Vincent
-		System.out.println("METHOD newContact: (1) Call readContact() to create a single contact. (2) Add info to contactArrayList.");
+	public void add(Contact c) {
+		contactArrayList.add(c);
 	}
-
 
 	/*
 	 * [GOAL] Method to sort entire ContactList in alphabetical order 
@@ -131,8 +123,9 @@ public class ContactList { // KZ.
 	 * "1. Call METHOD sortContact() to sort list" "2. Print list to console"
 	 */
 	public void printList() { // KZ, EM
-		System.out.println("METHOD printList: Print sorted list to console.");
-	}
+		for (int i=0; i <contactArrayList.size(); i++) {
+        	System.out.println(contactArrayList.get(i).printSingleContact());
+        }
 
 	/*
 	 * [GOAL] Method to retrieve contact with matching last name and print to
