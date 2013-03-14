@@ -124,8 +124,9 @@ public class ContactList { // KZ.
 	 */
 	public void printList() { // KZ, EM
 		for (int i=0; i <contactArrayList.size(); i++) {
-        	System.out.println(contactArrayList.get(i).printSingleContact());
-        }
+        		System.out.println(contactArrayList.get(i).printSingleContact());
+        	}
+	}
 
 	/*
 	 * [GOAL] Method to retrieve contact with matching last name and print to
