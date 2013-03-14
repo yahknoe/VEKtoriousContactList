@@ -33,6 +33,22 @@ public class TestContactList { // KZ.
 
 		// end of loop means user quit; save to disk
 		demoContactList.writeFile(); // KZ. write changes to disk
+	
+	
+		//USE THIS TO TEST ADDING CONTACTACTS TO LIST AND PRINTINT:
+		/*
+		demoContactList.add(demoContact.readContact()); // EM
+		demoContactList.printList(); // EM
+		
+		demoContactList.add(demoContact.readContact()); // EM
+		demoContactList.printList(); // EM
+
+		demoContactList.add(demoContact.readContact()); // EM
+		demoContactList.printList(); // EM
+		*/
+	
+	
+	
 	}
 }
 
