@@ -182,13 +182,22 @@ public class Contact { // KZ.
 	}
 
 	/*
-	 * Method to get email address
+	 * Method to get phone number. 
+	 * Method includes phone number validation. // KZ
 	 */
-	public String getEmail() { // EM, KZ
-		Scanner reader = new Scanner(System.in);
-		System.out.print("Email Address: ");
-		email = reader.nextLine();
-		return email;
+	public String getPhone() { // KZ, EM, KZ
+		final String VALID_PHONE_NUMBER_PATTERN = "[0-9]{3}-[0-9]{3}-[0-9]{4}";		// KZ
+		while (true) {
+			Scanner reader = new Scanner(System.in);
+			System.out.print("Phone Number: ");
+			phone = reader.nextLine();
+			if (phone.matches(VALID_PHONE_NUMBER_PATTERN)) { break;
+			} else	{
+				System.out.println(	"--- You did not enter a valid US phone number. \n" +
+						"--- Please enter a phone number in the following format: XXX-XXX-XXXX.");
+			}
+		}
+		return phone;
 	}
 
 	/*
