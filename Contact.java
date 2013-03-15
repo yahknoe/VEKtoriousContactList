@@ -25,7 +25,7 @@ public class Contact { // KZ.
 
 	//Constructor with params for TESTING!
 	public Contact(String last, String first, String st, String thisCity, 
-			       String thisState, String thisZip, String thisEmail, String phoneNum, String theNotes) {
+			String thisState, String thisZip, String thisEmail, String phoneNum, String theNotes) {
 		lastName = last;
 		firstName = first;
 		street = st;
@@ -58,10 +58,10 @@ public class Contact { // KZ.
 	 * Method to print single contact
 	 */
 	public String printSingleContact () {	 // KZ, EM
-		System.out.println("METHOD printSingleContact: Print out single complete contact");
-		return lastName + ", " + firstName + "\n" + street + "\n" + 
-		city + ", " + state + " " + zip + "\n" + email + "\n" + 
-		phone + "\n" + notes;
+		System.out.println(" - @ - Class Conact: METHOD printSingleContact: Print out complete contact");
+		return "Contact: " + lastName + ", " + firstName + "\n         " + street + "\n         " + 
+		city + ", " + state + " " + zip + "\n         " + email + "\n         " + 
+		phone + "\n         " + notes;
 	}
 
 	/*
@@ -72,13 +72,21 @@ public class Contact { // KZ.
 	}
 
 	/*
-	 * Method to get last name
+	 * Method to get last name. Method does not allow for no last name.
 	 */
 	public String getLastName() { // EM, KZ
-		Scanner reader = new Scanner(System.in);
-		System.out.print("Last Name: ");
-		lastName = reader.nextLine();
+		lastName = "";
+		while (lastName.equals(""))	{	// KZ - Added loop not allowing empty last name
+			Scanner reader = new Scanner(System.in);
+			System.out.print("Last Name: ");
+			lastName = reader.nextLine();
+			if (lastName.equals(""))	{
+				System.out.println(	"--- You did not enter a last name. \n" +
+									"--- Please enter a valid last name to start a new contact.");
+			}
+		}
 		return lastName;
+
 	}
 
 	/*
@@ -217,11 +225,11 @@ public class Contact { // KZ.
 	}
 
 	/*
-     * Getter method for key by which to sort Contact objects EM
-     */
-    public String getKey() {
-    	key = lastName + ", " + firstName;
-        return key;
-   	}
-   	
+	 * Getter method for key by which to sort Contact objects EM
+	 */
+	public String getKey() {
+		key = lastName + ", " + firstName;
+		return key;
+	}
+
 }
