@@ -40,7 +40,7 @@ public class Contact { // KZ.
 	/*
 	 * Method to create a single contact and set values
 	 */
-	public Contact readContact() {	 // KZ. 
+	public Contact readContact() {	 // KZ. VM
 		Contact thisContact = new Contact();
 		thisContact.setLastName(getLastName());
 		thisContact.setFirstName(getFirstName());
