@@ -57,7 +57,7 @@ public class ContactList { // KZ.
 			}
 			switch (menuChoice)	{
 			case 1: 
-				System.out.println ("switch menuChoice: new");	//CHANGE
+				System.out.println ("switch menuChoice: new");
 				addContact();
 				break;
 			case 2: 
