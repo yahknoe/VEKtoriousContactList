@@ -18,11 +18,11 @@ public class Contact { // KZ.
 	private String phone;
 	private String notes;
 	private String key;         //key for sorting Contacts EM
-	
+
 	//Constructor with no params
 	public Contact() {
 	}
-	
+
 	//Constructor with params for TESTING!
 	public Contact(String last, String first, String st, String thisCity, 
 			       String thisState, String thisZip, String thisEmail, String phoneNum, String theNotes) {
@@ -36,12 +36,9 @@ public class Contact { // KZ.
 		phone = phoneNum;
 		notes = theNotes;
 	}
-	
+
 	/*
 	 * Method to create a single contact and set values
-	 * "METHOD createContact scans/reads input from user and create a single contact"
-	 * "uses printSingleContact to output to console"
-	 * "   ~METHOD sets whole contact at once"
 	 */
 	public Contact readContact() {	 // KZ. 
 		Contact thisContact = new Contact();
@@ -59,7 +56,6 @@ public class Contact { // KZ.
 
 	/*
 	 * Method to print single contact
-	 * "METHOD printSingleContact: Print out single complete contact"
 	 */
 	public String printSingleContact () {	 // KZ, EM
 		System.out.println("METHOD printSingleContact: Print out single complete contact");
@@ -70,7 +66,6 @@ public class Contact { // KZ.
 
 	/*
 	 * Method to set last name
-	 * "      ~ Method setLastName: Set lastName"
 	 */
 	public void setLastName(String lN) { // KZ, EM
 		lastName = lN;
@@ -78,7 +73,6 @@ public class Contact { // KZ.
 
 	/*
 	 * Method to get last name
-	 * "      ~ Method getLastName: Get lastName"
 	 */
 	public String getLastName() { // EM, KZ
 		Scanner reader = new Scanner(System.in);
@@ -89,7 +83,6 @@ public class Contact { // KZ.
 
 	/*
 	 * Method to set first name
-	 * "      ~ Method setFirstName: Set firstName"
 	 */
 	public void setFirstName(String fN) { // KZ, EM
 		firstName = fN;
@@ -97,7 +90,6 @@ public class Contact { // KZ.
 
 	/*
 	 * Method to get first name
-	 * "      ~ Method getFirstName: Get firstName"
 	 */
 	public String getFirstName() { // EM, KZ
 		Scanner reader = new Scanner(System.in);
@@ -108,7 +100,6 @@ public class Contact { // KZ.
 
 	/*
 	 * Method to set street address
-	 * "      ~ Method setStreet: Set street"
 	 */
 	public void setStreet(String s) { // KZ, EM
 		street = s;
@@ -116,7 +107,6 @@ public class Contact { // KZ.
 
 	/*
 	 * Method to get street address
-	 * "      ~ Method getStreet: Get street"
 	 */
 	public String getStreet() { // EM, KZ
 		Scanner reader = new Scanner(System.in);
@@ -127,7 +117,6 @@ public class Contact { // KZ.
 
 	/*
 	 * Method to set city address
-	 * "      ~ Method setCity: Set city"
 	 */
 	public void setCity(String c) { // KZ, EM
 		city = c;
@@ -135,7 +124,6 @@ public class Contact { // KZ.
 
 	/*
 	 * Method to get city address
-	 * "      ~ Method getCity: Get city"
 	 */
 	public String getCity() { // EM, KZ
 		Scanner reader = new Scanner(System.in);
@@ -146,7 +134,6 @@ public class Contact { // KZ.
 
 	/*
 	 * Method to set state
-	 * "      ~ Method setState: Set state"
 	 */
 	public void setState(String s) { // KZ, EM
 		state = s;
@@ -154,7 +141,6 @@ public class Contact { // KZ.
 
 	/*
 	 * Method to get state
-	 * "      ~ Method getState: Get state"
 	 */
 	public String getState() { // EM, KZ
 		Scanner reader = new Scanner(System.in);
@@ -165,7 +151,6 @@ public class Contact { // KZ.
 
 	/*
 	 * Method to set zip code
-	 * "      ~ Method setZip: Set zip"
 	 */
 	public void setZip(String z) { // KZ, EM
 		zip = z;
@@ -173,7 +158,6 @@ public class Contact { // KZ.
 
 	/*
 	 * Method to get zip code
-	 * "      ~ Method getZip: Get zip"
 	 */
 	public String getZip() { // EM, KZ
 		Scanner reader = new Scanner(System.in);
@@ -184,7 +168,6 @@ public class Contact { // KZ.
 
 	/*
 	 * Method to set email address
-	 * "      ~ Method setEmail: Set email"
 	 */
 	public void setEmail(String e) { // KZ, EM
 		email = e;
@@ -192,7 +175,6 @@ public class Contact { // KZ.
 
 	/*
 	 * Method to get email address
-	 * "      ~ Method getEmail: Get email"
 	 */
 	public String getEmail() { // EM, KZ
 		Scanner reader = new Scanner(System.in);
@@ -203,7 +185,6 @@ public class Contact { // KZ.
 
 	/*
 	 * Method to set phone number
-	 * "      ~ Method setPhone: Set phone"
 	 */
 	public void setPhone(String p) { // KZ, EM
 		phone = p;
@@ -211,7 +192,6 @@ public class Contact { // KZ.
 
 	/*
 	 * Method to get phone number
-	 * "      ~ Method getPhone: Get phone"
 	 */
 	public String getPhone() { // EM, KZ
 		Scanner reader = new Scanner(System.in);
@@ -221,7 +201,6 @@ public class Contact { // KZ.
 	}
 	/*
 	 * Method to set notes
-	 * "      ~ Method setNotes: Set notes"
 	 */
 	public void setNotes(String n) { // KZ, EM
 		notes = n;
@@ -229,7 +208,6 @@ public class Contact { // KZ.
 
 	/*
 	 * Method to set notes
-	 * "      ~ Method getNotes: Get notes"
 	 */
 	public String getNotes() { // EM, KZ
 		Scanner reader = new Scanner(System.in);
