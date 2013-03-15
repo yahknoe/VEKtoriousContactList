@@ -246,9 +246,4 @@ public class Contact { // KZ.
         return key;
    	}
    	
-	// TEMP TEMP TEMP TEMP TEMP TEMP TEMP TEMP TEMP TEMP TEMP TEMP TEMP TEMP TEMP TEMP TEMP TEMP 
-	public void readContact() { // KZ. TEMPORARY to FIX ERROR IN CONTACT CALL
-		System.out.println("TEMP METHOD readContact");
-	}
-
 }
