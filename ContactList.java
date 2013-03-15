@@ -111,8 +111,10 @@ public class ContactList { // KZ.
 	/*
 	 * Adds Contact object to contactArrayList
 	 */
-	public void addContact (Contact c) {
-		contactArrayList.add(c);
+	public void addContact () {
+		Contact d = new Contact();
+		d.readContact();
+		contactArrayList.add(d);
 	}
 
 	/*
