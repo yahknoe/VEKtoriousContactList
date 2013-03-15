@@ -175,13 +175,6 @@ public class Contact { // KZ.
 	}
 
 	/*
-	 * Method to set email address
-	 */
-	public void setEmail(String e) { // KZ, EM
-		email = e;
-	}
-
-	/*
 	 * Method to get phone number. 
 	 * Method includes phone number validation. // KZ
 	 */
@@ -216,6 +209,34 @@ public class Contact { // KZ.
 		phone = reader.nextLine();
 		return phone;
 	}
+	/*
+	 * Method to set email address
+	 */
+	public void setEmail(String e) { // KZ, EM
+		email = e;
+	}
+	
+		/*
+	 * Method to get email address. 
+	 * Method includes email validation. // KZ
+	 */
+	public String getEmail() { // EM, KZ
+		final String VALID_EMAIL_PATTERN = ("[a-zA-Z0-9._-]+@[a-zA-Z0-9_-]+.[a-zA-Z]{3}");		// KZ		
+		while (true) {
+			Scanner reader = new Scanner(System.in);
+			System.out.print("Email Address: ");
+			email = reader.nextLine();
+			if (email.matches(VALID_EMAIL_PATTERN)) { break;
+			} else	{
+				System.out.println(	"--- You did not enter a valid email address. \n" +
+						"--- Please enter a email address in the following format: \n" +
+						"         yoururl_01@somplace.xxx \n" +
+						"    or   your.url_02@somplace.xxx \n");
+			}
+		}
+		return email;
+	}
+
 	/*
 	 * Method to set notes
 	 */
