@@ -175,6 +175,13 @@ public class Contact { // KZ.
 	}
 
 	/*
+	 * Method to set phone number
+	 */
+	public void setPhone(String p) { // KZ, EM
+		phone = p;
+	}
+
+	/*
 	 * Method to get phone number. 
 	 * Method includes phone number validation. // KZ
 	 */
@@ -193,22 +200,6 @@ public class Contact { // KZ.
 		return phone;
 	}
 
-	/*
-	 * Method to set phone number
-	 */
-	public void setPhone(String p) { // KZ, EM
-		phone = p;
-	}
-
-	/*
-	 * Method to get phone number
-	 */
-	public String getPhone() { // EM, KZ
-		Scanner reader = new Scanner(System.in);
-		System.out.print("Phone Number: ");
-		phone = reader.nextLine();
-		return phone;
-	}
 	/*
 	 * Method to set email address
 	 */
