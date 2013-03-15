@@ -6,7 +6,7 @@ import java.util.ArrayList; //to manage the ArrayList
 import java.util.Comparator; // to manage sorting
 import java.util.Collections; // to manage sorting
 // import java.util.InputMismatchException; // to catch errors when eliciting menu choice from user
-// only use this if I put the expeption catch back in.
+// only use this if I put the exception catch back in.
 import java.util.Scanner; // to get text from user
 
 
@@ -33,7 +33,7 @@ public class ContactList { // KZ.
 		System.out.println("        (5) Retrieve contact(s) by zip code");
 		System.out.println("        (6) Quit Contact List Program");
 		System.out.println("--------------------------------------------------------");
-		System.out.println("  What would you like to do? (Enter option from above):");
+		System.out.print("  What would you like to do? (Enter option from above): ");
 	}
 
 	/*
@@ -57,7 +57,7 @@ public class ContactList { // KZ.
 			}
 			switch (menuChoice)	{
 			case 1: 
-				System.out.println ("switch menuChoice: new");
+				System.out.println ("switch menuChoice: new");	//CHANGE
 				addContact();
 				break;
 			case 2: 
