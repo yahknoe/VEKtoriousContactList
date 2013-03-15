@@ -16,7 +16,7 @@ public class TestContactList { // KZ.
 		demoContact = new Contact(); // EM
 
 		// read contacts from disk to start where we left off
-		//[REMOVE AFTER FIRST RUN] demoContactList.readFile(); // KZ. read file from disk
+		demoContactList.readFile(); // KZ. read file from disk
 
 		// loop to be implemented to repeat menu until user quits
 		demoContactList.menu(); // KZ. call main menu, displays menu options
@@ -34,7 +34,7 @@ public class TestContactList { // KZ.
 		demoContactList.writeFile(); // KZ. write changes to disk
 	
 	
-		//USE THIS TO TEST ADDING CONTACTACTS TO LIST AND PRINTINT:
+		//USE THIS TO TEST ADDING CONTACTS TO LIST AND PRINTING:
 		/*
 		demoContactList.add(demoContact.readContact()); // EM
 		demoContactList.printList(); // EM
