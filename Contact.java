@@ -58,7 +58,7 @@ public class Contact { // KZ.
 	 * Method to print single contact
 	 */
 	public String printSingleContact () {	 // KZ, EM
-		System.out.println(" - @ - Class Conact: METHOD printSingleContact: Print out complete contact");
+		System.out.println(" - @ - Class Contact: METHOD printSingleContact: Print out complete contact");
 		return "Contact: " + lastName + ", " + firstName + "\n         " + street + "\n         " + 
 		city + ", " + state + " " + zip + "\n         " + email + "\n         " + 
 		phone + "\n         " + notes;
