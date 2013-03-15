@@ -19,6 +19,24 @@ public class Contact { // KZ.
 	private String notes;
 	private String key;         //key for sorting Contacts EM
 	
+	//Constructor with no params
+	public Contact() {
+	}
+	
+	//Constructor with params for TESTING!
+	public Contact(String last, String first, String st, String thisCity, 
+			       String thisState, String thisZip, String thisEmail, String phoneNum, String theNotes) {
+		lastName = last;
+		firstName = first;
+		street = st;
+		city = thisCity;
+		state = thisState;
+		zip = thisZip;
+		email = thisEmail;
+		phone = phoneNum;
+		notes = theNotes;
+	}
+	
 	/*
 	 * Method to create a single contact and set values
 	 * "METHOD createContact scans/reads input from user and create a single contact"
