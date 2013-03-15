@@ -27,10 +27,10 @@ public class TestContactList { // KZ.
 		demoContactList.menu(); // KZ. call main menu, displays menu options
 
 		// MENU OPTIONS -- For demonstration purposes only
-			System.out.println(" •• 04 - TestContactList: REMOVED •• demoContact.readContact()");
-			// demoContact.readContact(); // EM (REMOVED AS THIS CAUSES A NEW CONTACT AFTER MENU QUIT
-			System.out.println(" •• 05 - TestContactList: demoContact.printSingleContact()");
-			System.out.println(demoContact.printSingleContact()); // EM
+		System.out.println(" •• 04 - TestContactList: REMOVED •• demoContact.readContact()");
+		// demoContact.readContact(); // EM (REMOVED AS THIS CAUSES A NEW CONTACT AFTER MENU QUIT
+		System.out.println(" •• 05 - TestContactList: demoContact.printSingleContact()");
+		System.out.println(demoContact.printSingleContact()); // EM
 
 		System.out.println(" •• 06 - TestContactList: demoContactList.printList()");
 		demoContactList.printList(); // KZ.
@@ -44,22 +44,6 @@ public class TestContactList { // KZ.
 		// end of loop means user quit; save to disk
 		System.out.println(" •• 10 -TestContactList: demoContactList.writeFile()");
 		demoContactList.writeFile(); // KZ. write changes to disk
-
-
-		//USE THIS TO TEST ADDING CONTACTS TO LIST AND PRINTING:
-		/*
-		demoContactList.add(demoContact.readContact()); // EM
-		demoContactList.printList(); // EM
-		
-		demoContactList.add(demoContact.readContact()); // EM
-		demoContactList.printList(); // EM
-
-		demoContactList.add(demoContact.readContact()); // EM
-		demoContactList.printList(); // EM
-		*/
-
-
-
 	}
 }
 
