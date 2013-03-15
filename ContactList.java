@@ -5,7 +5,8 @@ import java.io.ObjectInputStream; //to read serialized objects from a input stre
 import java.util.ArrayList; //to manage the ArrayList
 import java.util.Comparator; // to manage sorting
 import java.util.Collections; // to manage sorting
-import java.util.InputMismatchException; // to catch errors when eliciting menu choicw from user
+// import java.util.InputMismatchException; // to catch errors when eliciting menu choice from user
+// only use this if I put the expeption catch back in.
 import java.util.Scanner; // to get text from user
 
 
@@ -38,7 +39,7 @@ public class ContactList { // KZ.
 	 * "METHOD menu: Scan for menu options choice from user and execute options"
 	 */
 	public void menu() {	//KZ
-		
+
 		System.out.println("Welcome to the Quality Soft Contact List Program.");
 		menuText();
 
@@ -83,11 +84,11 @@ public class ContactList { // KZ.
 			menuText();
 			menuChoice = scanner.nextInt();
 		}
-		
+
 		System.out.println ("switch menuChoice: quit");
 		System.out.println("Thank you for using the contact list!");
 		writeFile();
-		
+
 	}
 
 	/*
