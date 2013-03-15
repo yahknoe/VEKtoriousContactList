@@ -55,7 +55,7 @@ public class ContactList { // KZ.
 			switch (menuChoice)	{
 			case 1: 
 				System.out.println ("switch menuChoice: new");
-				newContact();
+				addContact();
 				break;
 			case 2: 
 				System.out.println ("switch menuChoice: print");
@@ -111,7 +111,7 @@ public class ContactList { // KZ.
 	/*
 	 * Adds Contact object to contactArrayList
 	 */
-	public void add(Contact c) {
+	public void addContact (Contact c) {
 		contactArrayList.add(c);
 	}
 
