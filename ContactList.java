@@ -23,24 +23,26 @@ public class ContactList { // KZ.
 	 * Method menuText: Menu text for contact list
 	 */
 	private void menuText() {	//KZ
-		System.out.println("----------------------------------------------------");
-		System.out.println("------------------   MAIN MENU:   ------------------");
-		System.out.println("----------------------------------------------------");
-		System.out.println("(1) New contact");
-		System.out.println("(2) Print contact list");
-		System.out.println("(3) Retrieve contact(s) by last name");
-		System.out.println("(4) Retrieve contact(s) by email address");
-		System.out.println("(5) Retrieve contact(s) by zip code");
-		System.out.println("(6) Quit Contact List Program");
-		System.out.println("What would you like to do? (Enter option from above):");
+		System.out.println("--------------------------------------------------------");
+		System.out.println("--------------------   MAIN MENU:   --------------------");
+		System.out.println("--------------------------------------------------------");
+		System.out.println("        (1) New contact");
+		System.out.println("        (2) Print contact list");
+		System.out.println("        (3) Retrieve contact(s) by last name");
+		System.out.println("        (4) Retrieve contact(s) by email address");
+		System.out.println("        (5) Retrieve contact(s) by zip code");
+		System.out.println("        (6) Quit Contact List Program");
+		System.out.println("--------------------------------------------------------");
+		System.out.println("  What would you like to do? (Enter option from above):");
 	}
 
 	/*
-	 * "METHOD menu: Scan for menu options choice from user and execute options"
+	 * " -- ContactList: METHOD menu: Scan for menu options choice from user and execute options"
 	 */
 	public void menu() {	//KZ
-
-		System.out.println("Welcome to the Quality Soft Contact List Program.");
+		System.out.println("--------------------------------------------------------");
+		System.out.println("--- Welcome to the Quality Soft Contact List Program ---");
+		
 		menuText();
 
 		int menuChoice = 0;
@@ -94,19 +96,19 @@ public class ContactList { // KZ.
 	/*
 	 * Method to read Contact objects from saved file and add to
 	 * contactArrayList() -VP, EM
-	 * "METHOD readFile: Read Contact objects from saved file and add to contactArrayList()"
+	 * " -- ContactList: METHOD readFile: Read Contact objects from saved file and add to contactArrayList()"
 	 * "Read data from file into ArrayList"
 	 */
 	public void readFile() { // KZ. VINCENT
-		System.out.println("METHOD readFile: Read Contact objects from saved file and add to contactArrayList()");
+		System.out.println(" -- ContactList: METHOD readFile: Read Contact objects from saved file \n    and add to contactArrayList()");
 	}
 
 	/*
 	 * Method to save Contact objects to file from contactArrayList[] -VP
-	 * "METHOD writeFile: Write Contact object data from ArrayList to file"
+	 * " -- ContactList: METHOD writeFile: Write Contact object data from ArrayList to file"
 	 */
 	public void writeFile() { // KZ. VINCENT
-		System.out.println("METHOD writeFile: Write Contact object data from ArrayList to file");
+		System.out.println(" -- ContactList: METHOD writeFile: Write Contact object data from \n    ArrayList to file");
 	}
 
 	/*
@@ -127,20 +129,20 @@ public class ContactList { // KZ.
 	 * [STEP 2] Call Collections.sort in sortContact() 
 	 * [STEP 3] Return sorted list -EM
 	 * 
-	 * "METHOD sortContact: Sort contact list in alphabetical order."
+	 * " -- ContactList: METHOD sortContact: Sort contact list in alphabetical order."
 	 * "1. Implement Comparator."
 	 * "a. Create Comparator for sorting contacts by name in natural order (alphabetically)"
 	 * "2. STANDARD METHOD Collections.sort sorts ArrayList in alphabetical order"
 	 * "3. Return sorted list"
 	 */
 	private void sortContact() { // KZ, EM
-		System.out.println("METHOD sortContact: Sort contact list in alphabetical order.");
+		System.out.println(" -- ContactList: METHOD sortContact: Sort contact list in alphabetical order.");
 		//class NameComparable implements Comparator<Contact>
 	}
 
 	/*
 	 * Method to print entire ContactList in alphabetical order -EM
-	 * "METHOD printList: Print sorted list to console."
+	 * " -- ContactList: METHOD printList: Print sorted list to console."
 	 * "1. Call METHOD sortContact() to sort list" "2. Print list to console"
 	 */
 	public void printList() { // KZ, EM
@@ -156,36 +158,39 @@ public class ContactList { // KZ.
 	 * [STEP 2] Return matching contact(s) OR return error 
 	 * [STEP 3] Print selected contact(s) from main -EM
 	 * 
-	 * "METHOD retrieveLastName: Retrieve contact(s) with matching last name & print to console or return error if none match"
+	 * " -- ContactList: METHOD retrieveLastName: Retrieve contact(s) with matching last name & print to console or return error if none match"
 	 * "1. Search for matching last name"
 	 * "2. Return matching contact(s) OR return error"
 	 * "3. Call System.out.println(retrieveLastName()) or similar from main to print to console"
 	 */
 	public void retrieveLastName() { // KZ, EM
-		System.out.println("METHOD retrieveLastName: Retrieve contact(s) with matching last name & print to console or return error if none match");
+		System.out.println(" -- ContactList: METHOD retrieveLastName: Retrieve contact(s) with \n" +
+						   "    matching last name & print to console or return error if none match");
 	}
 
 	/*
 	 * [GOAL] Method to retrieve contact by email and print to console or return
 	 * error if none match -EM
-	 * "METHOD retrieveEmail: Retrieve contact(s) with matching email & print to console or return error if none match"
+	 * " -- ContactList: METHOD retrieveEmail: Retrieve contact(s) with matching email & print to console or return error if none match"
 	 * "1. Search for matching email"
 	 * "2. Return matching contact(s) OR return error"
 	 * "3. Call System.out.println(retrieveEmail()) or similar from main to print to console"
 	 */
 	public void retrieveEmail() { // KZ, EM
-		System.out.println("METHOD retrieveEmail: Retrieve contact(s) with matching email & print to console or return error if none match");
+		System.out.println(" -- ContactList: METHOD retrieveEmail: Retrieve contact(s) with \n" +
+						   "    matching email & print to console or return error if none match");
 	}
 
 	/*
 	 * [GOAL] Method to retrieve contact by zip and print to console or return
 	 * error if none match -EM
-	 * "METHOD retrieveEmail: Retrieve contact(s) with matching zip & print to console or return error if none match"
+	 * " -- ContactList: METHOD retrieveEmail: Retrieve contact(s) with matching zip & print to console or return error if none match"
 	 * "1. Search for matching zip"
 	 * "2. Return matching contact(s) OR return error"
 	 * "3. Call System.out.println(retrieveZip()) or similar from main to print to console"
 	 */
 	public void retrieveZip() { // KZ, EM
-		System.out.println("METHOD retrieveZip: Retrieve contact(s) with matching zip & print to console or return error if none match");
+		System.out.println(" -- ContactList: METHOD retrieveZip: Retrieve contact(s) with \n" +
+						   "    matching zip & print to console or return error if none match");
 	}
 }
