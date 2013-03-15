@@ -19,15 +19,12 @@ public class ContactList { // KZ.
 	public ArrayList<Contact> contactArrayList = new ArrayList<Contact>();
 
 	/*
-	 * Method displays menu and scans for menu choices
-	 * "METHOD menu: Output Menu and scan for Menu Options"
-	 * "Contains switch statement to call various menu options"
+	 * Method menuText: Menu text for contact list
 	 */
-	public void menu() {
-		System.out.println("Welcome to the Quality Soft Contact List Program.");
-		System.out.println("------------------------------------------------");
-		System.out.println("----------------   MAIN MENU:   ----------------");
-		System.out.println("------------------------------------------------");
+	private void menuText() {	//KZ
+		System.out.println("----------------------------------------------------");
+		System.out.println("------------------   MAIN MENU:   ------------------");
+		System.out.println("----------------------------------------------------");
 		System.out.println("(1) New contact");
 		System.out.println("(2) Print contact list");
 		System.out.println("(3) Retrieve contact(s) by last name");
@@ -35,43 +32,64 @@ public class ContactList { // KZ.
 		System.out.println("(5) Retrieve contact(s) by zip code");
 		System.out.println("(6) Quit Contact List Program");
 		System.out.println("What would you like to do? (Enter option from above):");
+	}
+
+	/*
+	 * "METHOD menu: Scan for menu options choice from user and execute options"
+	 */
+	public void menu() {	//KZ
+		
+		System.out.println("Welcome to the Quality Soft Contact List Program.");
+		menuText();
 
 		int menuChoice = 0;
 		Scanner scanner = new Scanner (System.in);
-		// menuChoice = scanner.nextInt();
+		menuChoice = scanner.nextInt();
 
-		try	{
-			System.out.println("inside try");
-			menuChoice = scanner.nextInt();
-			do	{
+		while (menuChoice != 6) {
+
+			while (menuChoice < 1 || menuChoice > 6 )	{
 				System.out.println ("You have entered an invalid choice. Please re-enter your menu choice");
 				menuChoice = scanner.nextInt();
-			} while (menuChoice < 1 && menuChoice > 6 );
-			
+			}
 			switch (menuChoice)	{
-			case 1: System.out.println ("Choice new");
-			break;
-			case 2: System.out.println ("Choice print");
-			break;
-			case 3: System.out.println ("Choice last");
-			break;
-			case 4: System.out.println ("Choice email");
-			break;
-			case 5: System.out.println ("Choice zip");
-			break;
-			case 6: System.out.println ("Choice quit");
-			break;
-			default: System.out.println  ("Choice WHAT IS / DO WE NEED DEFAULT??");
+			case 1: 
+				System.out.println ("switch menuChoice: new");
+				newContact();
+				break;
+			case 2: 
+				System.out.println ("switch menuChoice: print");
+				printList();
+				break;
+			case 3: 
+				System.out.println ("switch menuChoice: last");
+				retrieveLastName();
+				sortContact();
+				break;
+			case 4: 
+				System.out.println ("switch menuChoice: email");
+				retrieveEmail();
+				sortContact();
+				break;
+			case 5: 
+				System.out.println ("switch menuChoice: zip");
+				retrieveZip();
+				sortContact();
+				break;
+			default: System.out.println  ("switch menuChoice: WHAT IS / DO WE NEED DEFAULT??");
 			break;
 			}
 
-		} catch (InputMismatchException e)	{
-			System.out.println("inside catch");
-			System.out.println ("You have entered an invalid choice. Please re-enter your menu choice using digits only.");
+			menuText();
 			menuChoice = scanner.nextInt();
 		}
-
+		
+		System.out.println ("switch menuChoice: quit");
+		System.out.println("Thank you for using the contact list!");
+		writeFile();
+		
 	}
+
 	/*
 	 * Method to read Contact objects from saved file and add to
 	 * contactArrayList() -VP, EM
