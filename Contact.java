@@ -5,9 +5,9 @@ import java.util.Scanner; //for user input
  * last name, street address, city, state, zip code, email address, phone
  * number, and notes.
  */
-public class Contact { // KZ.
+public class Contact implements Comparable<Contact> { // EM, KZ
 
-	// ---------- VARIABLES ---------- 
+	// ---------- VARIABLES ----------
 	private String lastName;
 	private String firstName;
 	private String street;
@@ -17,15 +17,16 @@ public class Contact { // KZ.
 	private String email;
 	private String phone;
 	private String notes;
-	private String key;         //key for sorting Contacts EM
+	private String key; // key for sorting Contacts EM
 
-	//Constructor with no params
+	// Constructor with no params
 	public Contact() {
 	}
 
-	//Constructor with params for TESTING!
-	public Contact(String last, String first, String st, String thisCity, 
-			String thisState, String thisZip, String thisEmail, String phoneNum, String theNotes) {
+	// Constructor with params for TESTING!
+	public Contact(String last, String first, String st, String thisCity,
+			String thisState, String thisZip, String thisEmail,
+			String phoneNum, String theNotes) {
 		lastName = last;
 		firstName = first;
 		street = st;
@@ -40,7 +41,7 @@ public class Contact { // KZ.
 	/*
 	 * Method to create a single contact and set values
 	 */
-	public Contact readContact() {	 // KZ. VM
+	public Contact readContact() { // KZ. VM
 		Contact thisContact = new Contact();
 		thisContact.setLastName(getLastName());
 		thisContact.setFirstName(getFirstName());
@@ -55,13 +56,15 @@ public class Contact { // KZ.
 	}
 
 	/*
-	 * Method to print single contact
+	 * Method to return all information for a single contact
 	 */
-	public String printSingleContact () {	 // KZ, EM
-		System.out.println(" - @ - Class Contact: METHOD printSingleContact: Print out complete contact");
-		return "Contact: " + lastName + ", " + firstName + "\n         " + street + "\n         " + 
-		city + ", " + state + " " + zip + "\n         " + email + "\n         " + 
-		phone + "\n         " + notes;
+	public String returnSingleContact() { // KZ, EM
+		System.out
+				.println(" - @ - Class Contact: METHOD printSingleContact: Print out complete contact");
+			return "Contact: " + lastName + ", " + firstName + "\n         "
+			+ street + "\n         " + city + ", " + state + " " + zip
+			+ "\n         " + email + "\n         " + phone + "\n         "
+			+ notes;
 	}
 
 	/*
@@ -76,13 +79,15 @@ public class Contact { // KZ.
 	 */
 	public String getLastName() { // EM, KZ
 		lastName = "";
-		while (lastName.equals(""))	{	// KZ - Added loop not allowing empty last name
+		while (lastName.equals("")) { // KZ - Added loop not allowing empty last
+										// name
 			Scanner reader = new Scanner(System.in);
 			System.out.print("Last Name: ");
 			lastName = reader.nextLine();
-			if (lastName.equals(""))	{
-				System.out.println(	"--- You did not enter a last name. \n" +
-									"--- Please enter a valid last name to start a new contact.");
+			if (lastName.equals("")) {
+				System.out
+						.println("--- You did not enter a last name. \n"
+								+ "--- Please enter a valid last name to start a new contact.");
 			}
 		}
 		return lastName;
@@ -182,19 +187,21 @@ public class Contact { // KZ.
 	}
 
 	/*
-	 * Method to get phone number. 
-	 * Method includes phone number validation. // KZ
+	 * Method to get phone number. Method includes phone number validation. //
+	 * KZ
 	 */
 	public String getPhone() { // KZ, EM, KZ
-		final String VALID_PHONE_NUMBER_PATTERN = "[0-9]{3}-[0-9]{3}-[0-9]{4}";		// KZ
+		final String VALID_PHONE_NUMBER_PATTERN = "[0-9]{3}-[0-9]{3}-[0-9]{4}"; // KZ
 		while (true) {
 			Scanner reader = new Scanner(System.in);
 			System.out.print("Phone Number: ");
 			phone = reader.nextLine();
-			if (phone.matches(VALID_PHONE_NUMBER_PATTERN)) { break;
-			} else	{
-				System.out.println(	"--- You did not enter a valid US phone number. \n" +
-						"--- Please enter a phone number in the following format: XXX-XXX-XXXX.");
+			if (phone.matches(VALID_PHONE_NUMBER_PATTERN)) {
+				break;
+			} else {
+				System.out
+						.println("--- You did not enter a valid US phone number. \n"
+								+ "--- Please enter a phone number in the following format: XXX-XXX-XXXX.");
 			}
 		}
 		return phone;
@@ -206,23 +213,24 @@ public class Contact { // KZ.
 	public void setEmail(String e) { // KZ, EM
 		email = e;
 	}
-	
-		/*
-	 * Method to get email address. 
-	 * Method includes email validation. // KZ
+
+	/*
+	 * Method to get email address. Method includes email validation. // KZ
 	 */
 	public String getEmail() { // EM, KZ
-		final String VALID_EMAIL_PATTERN = ("[a-zA-Z0-9._-]+@[a-zA-Z0-9_-]+.[a-zA-Z]{3}");		// KZ		
+		final String VALID_EMAIL_PATTERN = ("[a-zA-Z0-9._-]+@[a-zA-Z0-9_-]+.[a-zA-Z]{3}"); // KZ
 		while (true) {
 			Scanner reader = new Scanner(System.in);
 			System.out.print("Email Address: ");
 			email = reader.nextLine();
-			if (email.matches(VALID_EMAIL_PATTERN)) { break;
-			} else	{
-				System.out.println(	"--- You did not enter a valid email address. \n" +
-						"--- Please enter a email address in the following format: \n" +
-						"         yoururl_01@somplace.xxx \n" +
-						"    or   your.url_02@somplace.xxx \n");
+			if (email.matches(VALID_EMAIL_PATTERN)) {
+				break;
+			} else {
+				System.out
+						.println("--- You did not enter a valid email address. \n"
+								+ "--- Please enter a email address in the following format: \n"
+								+ "         yoururl_01@somplace.xxx \n"
+								+ "    or   your.url_02@somplace.xxx \n");
 			}
 		}
 		return email;
@@ -236,7 +244,7 @@ public class Contact { // KZ.
 	}
 
 	/*
-	 * Method to set notes
+	 * Method to get notes
 	 */
 	public String getNotes() { // EM, KZ
 		Scanner reader = new Scanner(System.in);
@@ -246,11 +254,22 @@ public class Contact { // KZ.
 	}
 
 	/*
-	 * Getter method for key by which to sort Contact objects EM
+	 * Getter method for key by which to sort Contact objects. -EM
 	 */
-	public String getKey() {
+	public String getKey() { // EM
 		key = lastName + ", " + firstName;
 		return key;
+	}
+
+	/*
+	 * Class Contact implements Comparable. Method uses compareTo() to sort
+	 * entire ContactList in alphabetical order (natural order for Strings). -EM
+	 * " -- Contact: METHOD sortContact: Sort contact list in alphabetical order."
+	 */
+	public int compareTo(Contact compareContactKey) { // EM
+		String contactKey1 = ((Contact) this).getKey();
+		String contactKey2 = ((Contact) compareContactKey).getKey();
+		return contactKey1.compareTo(contactKey2);
 	}
 
 }

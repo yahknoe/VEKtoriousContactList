@@ -27,11 +27,10 @@ public class TestContactList { // KZ.
 		demoContactList.menu(); // KZ. call main menu, displays menu options
 
 		// MENU OPTIONS -- For demonstration purposes only
-		System.out.println(" ** 04 - TestContactList: REMOVED ‚Ä¢‚Ä¢¬†demoContact.readContact()");
+		System.out.println(" ** 04 - TestContactList: REMOVED •• demoContact.readContact()");
 		// demoContact.readContact(); // EM (REMOVED AS THIS CAUSES A NEW CONTACT AFTER MENU QUIT
-		System.out.println(" ** 05 - TestContactList: demoContact.printSingleContact()");
-		System.out.println(demoContact.printSingleContact()); // EM
-
+		System.out.println(" ** 05 - TestContactList: demoContact.returnSingleContact()");
+		System.out.println(demoContact.returnSingleContact()); // EM
 		System.out.println(" ** 06 - TestContactList: demoContactList.printList()");
 		demoContactList.printList(); // KZ.
 		System.out.println(" ** 07 - TestContactList: demoContactList.retrieveLastName()");
@@ -53,7 +52,7 @@ public class TestContactList { // KZ.
 --------------------------------------------------------
 
  ** 01 - TestContactList: print demoContact
-    demoContact: Contact@eb42cbf
+    demoContact: Contact@3487a5cc
  ** 02 - TestContactList: demoContactList.readFile()
  -- ContactList: METHOD readFile: Read Contact objects from saved file 
     and add to contactArrayList()
@@ -70,17 +69,60 @@ public class TestContactList { // KZ.
         (5) Retrieve contact(s) by zip code
         (6) Quit Contact List Program
 --------------------------------------------------------
+  What would you like to do? (Enter option from above): 2
+switch menuChoice: print
+The Contact List is empty. Please add a new contact!
+--------------------------------------------------------
+--------------------   MAIN MENU:   --------------------
+--------------------------------------------------------
+        (1) New contact
+        (2) Print contact list
+        (3) Retrieve contact(s) by last name
+        (4) Retrieve contact(s) by email address
+        (5) Retrieve contact(s) by zip code
+        (6) Quit Contact List Program
+--------------------------------------------------------
   What would you like to do? (Enter option from above): 1
 switch menuChoice: new
-Last Name: Johnson
-First Name: Kim
-Street Address: 345 Main St
-City: Someplace
-State: NO
-Zip: 03030
-Email Address: kasjdu@wherever.com
-Phone Number: 555-555-5555
-Notes: whatever will be will be
+Last Name: Llo
+First Name: He
+Street Address: 123 Yay Dr.
+City: Yippee
+State: HA
+Zip: 12345
+Email Address: VEK@win.us
+--- You did not enter a valid email address. 
+--- Please enter a email address in the following format: 
+         yoururl_01@somplace.xxx 
+    or   your.url_02@somplace.xxx 
+
+Email Address: VEK@win.usa
+Phone Number: 1234567890
+--- You did not enter a valid US phone number. 
+--- Please enter a phone number in the following format: XXX-XXX-XXXX.
+Phone Number: 123-456-7890
+Notes: Lookin' good, feelin' fine.
+--------------------------------------------------------
+--------------------   MAIN MENU:   --------------------
+--------------------------------------------------------
+        (1) New contact
+        (2) Print contact list
+        (3) Retrieve contact(s) by last name
+        (4) Retrieve contact(s) by email address
+        (5) Retrieve contact(s) by zip code
+        (6) Quit Contact List Program
+--------------------------------------------------------
+  What would you like to do? (Enter option from above): 1
+switch menuChoice: new
+Last Name: Sort
+First Name: AlphabetInTheRoom
+Street Address: 456 Zoo Ln
+City: Tuscany
+State: :)
+Zip: 98765
+Email Address: list@sorted.yup
+Phone Number: 987-654-3210
+Notes: Notable, but only just.
 --------------------------------------------------------
 --------------------   MAIN MENU:   --------------------
 --------------------------------------------------------
@@ -94,12 +136,73 @@ Notes: whatever will be will be
   What would you like to do? (Enter option from above): 2
 switch menuChoice: print
  - @ - Class Contact: METHOD printSingleContact: Print out complete contact
-Contact: Johnson, Kim
-         345 Main St
-         Someplace, NO 03030
-         kasjdu@wherever.com
-         555-555-5555
-         whatever will be will be
+Contact: Llo, He
+         123 Yay Dr.
+         Yippee, HA 12345
+         VEK@win.usa
+         123-456-7890
+         Lookin' good, feelin' fine.
+ - @ - Class Contact: METHOD printSingleContact: Print out complete contact
+Contact: Sort, AlphabetInTheRoom
+         456 Zoo Ln
+         Tuscany, :) 98765
+         list@sorted.yup
+         987-654-3210
+         Notable, but only just.
+--------------------------------------------------------
+--------------------   MAIN MENU:   --------------------
+--------------------------------------------------------
+        (1) New contact
+        (2) Print contact list
+        (3) Retrieve contact(s) by last name
+        (4) Retrieve contact(s) by email address
+        (5) Retrieve contact(s) by zip code
+        (6) Quit Contact List Program
+--------------------------------------------------------
+  What would you like to do? (Enter option from above): 1
+switch menuChoice: new
+Last Name: Atlas
+First Name: Any
+Street Address: 112 3rd Ave
+City: Anytown
+State: DK
+Zip: 23568
+Email Address: first@list.wrk
+Phone Number: 111-111-1111
+Notes: 'A' is for 'ahead of the rest.'
+--------------------------------------------------------
+--------------------   MAIN MENU:   --------------------
+--------------------------------------------------------
+        (1) New contact
+        (2) Print contact list
+        (3) Retrieve contact(s) by last name
+        (4) Retrieve contact(s) by email address
+        (5) Retrieve contact(s) by zip code
+        (6) Quit Contact List Program
+--------------------------------------------------------
+  What would you like to do? (Enter option from above): 2
+switch menuChoice: print
+ - @ - Class Contact: METHOD printSingleContact: Print out complete contact
+Contact: Atlas, Any
+         112 3rd Ave
+         Anytown, DK 23568
+         first@list.wrk
+         111-111-1111
+         'A' is for 'ahead of the rest.'
+ - @ - Class Contact: METHOD printSingleContact: Print out complete contact
+Contact: Llo, He
+         123 Yay Dr.
+         Yippee, HA 12345
+         VEK@win.usa
+         123-456-7890
+         Lookin' good, feelin' fine.
+ - @ - Class Contact: METHOD printSingleContact: Print out complete contact
+Contact: Sort, AlphabetInTheRoom
+         456 Zoo Ln
+         Tuscany, :) 98765
+         list@sorted.yup
+         987-654-3210
+         Notable, but only just.
 --------------------------------------------------------
 --------------------   MAIN MENU:   --------------------
 --------------------------------------------------------
@@ -114,7 +217,6 @@ Contact: Johnson, Kim
 switch menuChoice: last
  -- ContactList: METHOD retrieveLastName: Retrieve contact(s) with 
     matching last name & print to console or return error if none match
- -- ContactList: METHOD sortContact: Sort contact list in alphabetical order.
 --------------------------------------------------------
 --------------------   MAIN MENU:   --------------------
 --------------------------------------------------------
@@ -129,7 +231,6 @@ switch menuChoice: last
 switch menuChoice: email
  -- ContactList: METHOD retrieveEmail: Retrieve contact(s) with 
     matching email & print to console or return error if none match
- -- ContactList: METHOD sortContact: Sort contact list in alphabetical order.
 --------------------------------------------------------
 --------------------   MAIN MENU:   --------------------
 --------------------------------------------------------
@@ -144,7 +245,6 @@ switch menuChoice: email
 switch menuChoice: zip
  -- ContactList: METHOD retrieveZip: Retrieve contact(s) with 
     matching zip & print to console or return error if none match
- -- ContactList: METHOD sortContact: Sort contact list in alphabetical order.
 --------------------------------------------------------
 --------------------   MAIN MENU:   --------------------
 --------------------------------------------------------
@@ -160,8 +260,8 @@ switch menuChoice: quit
 Thank you for using the contact list!
  -- ContactList: METHOD writeFile: Write Contact object data from 
     ArrayList to file
- ** 04 - TestContactList: REMOVED ‚Ä¢‚Ä¢¬†demoContact.readContact()
- ** 05 - TestContactList: demoContact.printSingleContact()
+ ** 04 - TestContactList: REMOVED •• demoContact.readContact()
+ ** 05 - TestContactList: demoContact.returnSingleContact()
  - @ - Class Contact: METHOD printSingleContact: Print out complete contact
 Contact: null, null
          null
@@ -171,12 +271,26 @@ Contact: null, null
          null
  ** 06 - TestContactList: demoContactList.printList()
  - @ - Class Contact: METHOD printSingleContact: Print out complete contact
-Contact: Johnson, Kim
-         345 Main St
-         Someplace, NO 03030
-         kasjdu@wherever.com
-         555-555-5555
-         whatever will be will be
+Contact: Atlas, Any
+         112 3rd Ave
+         Anytown, DK 23568
+         first@list.wrk
+         111-111-1111
+         'A' is for 'ahead of the rest.'
+ - @ - Class Contact: METHOD printSingleContact: Print out complete contact
+Contact: Llo, He
+         123 Yay Dr.
+         Yippee, HA 12345
+         VEK@win.usa
+         123-456-7890
+         Lookin' good, feelin' fine.
+ - @ - Class Contact: METHOD printSingleContact: Print out complete contact
+Contact: Sort, AlphabetInTheRoom
+         456 Zoo Ln
+         Tuscany, :) 98765
+         list@sorted.yup
+         987-654-3210
+         Notable, but only just.
  ** 07 - TestContactList: demoContactList.retrieveLastName()
  -- ContactList: METHOD retrieveLastName: Retrieve contact(s) with 
     matching last name & print to console or return error if none match
