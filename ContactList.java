@@ -8,11 +8,12 @@ import java.util.Collections; // to manage sorting
 // import java.util.InputMismatchException; // to catch errors when eliciting menu choice from user
 // only use this if I put the exception catch back in.
 import java.util.Scanner; // to get text from user
+import java.io.Serializable; //to write object to file
 
 /*
  * Class to manage and manipulate ContactList objects
  */
-public class ContactList { // KZ.
+public class ContactList implements Serializable { // KZ.
 
 	// ---------- VARIABLES ----------
 	// ArrayList to store Contact objects -EM
@@ -100,27 +101,25 @@ public class ContactList { // KZ.
 	}
 
 	/*
-	 * Method to read Contact objects from saved file and add to
-	 * contactArrayList() -VP, EM
-	 * " -- ContactList: METHOD readFile: Read Contact objects from saved file and add to contactArrayList()"
-	 * "Read data from file into ArrayList"
+	 * Method to read contactArrayList object from saved file -VP
 	 */
-	public void readFile() { // KZ. VINCENT
-		System.out
-				.println(" -- ContactList: METHOD readFile: Read Contact objects from saved file \n    and add to contactArrayList()");
+	public ContactList readFile() throws IOException, ClassNotFoundException {
+		FileInputStream fis = new FileInputStream("file.sav");
+        	ObjectInputStream ois = new ObjectInputStream(fis);
+       		return (ContactList) ois.readObject();
+	}
+	/*
+	 * Method to save contactArrayList object to file -VP
+	 */
+	public void writeFile(ContactList list) throws IOException {
+		FileOutputStream fos = new FileOutputStream("file.sav");
+        	ObjectOutputStream oos = new ObjectOutputStream(fos);
+		oos.writeObject(list);
+		oos.close();
 	}
 
 	/*
-	 * Method to save Contact objects to file from contactArrayList[] -VP
-	 * " -- ContactList: METHOD writeFile: Write Contact object data from ArrayList to file"
-	 */
-	public void writeFile() { // KZ. VINCENT
-		System.out
-				.println(" -- ContactList: METHOD writeFile: Write Contact object data from \n    ArrayList to file");
-	}
-
-	/*
-	 * Adds Contact object to contactArrayList
+	 * Adds Contact object to contactArrayList -VP
 	 */
 	public void addContact() {
 		Contact d = new Contact();
