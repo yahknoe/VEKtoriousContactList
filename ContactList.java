@@ -74,17 +74,14 @@ public class ContactList { // KZ.
 			case 3:
 				System.out.println("switch menuChoice: last");
 				retrieveLastName();
-				sortContact();
 				break;
 			case 4:
 				System.out.println("switch menuChoice: email");
 				retrieveEmail();
-				sortContact();
 				break;
 			case 5:
 				System.out.println("switch menuChoice: zip");
 				retrieveZip();
-				sortContact();
 				break;
 			default:
 				System.out
@@ -154,55 +151,124 @@ public class ContactList { // KZ.
 					.println("The Contact List is empty. Please add a new contact!");
 		} else {
 			for (i = 0; i < contactArrayList.size(); i++) {
-				System.out.println(contactArrayList.get(i)	// EM, VP
+				System.out.println(contactArrayList.get(i) // EM, VP
 						.returnSingleContact());
 			}
 		}
 	}
 
 	/*
-	 * [GOAL] Method to retrieve contact with matching last name and print to
-	 * console or return error if none match [STEP 1] Search for matching last
-	 * name [STEP 2] Return matching contact(s) OR return error [STEP 3] Print
-	 * selected contact(s) from main -EM
-	 * 
-	 * " -- ContactList: METHOD retrieveLastName: Retrieve contact(s) with matching last name & print to console or return error if none match"
-	 * "1. Search for matching last name"
-	 * "2. Return matching contact(s) OR return error"
-	 * "3. Call System.out.println(retrieveLastName()) or similar from main to print to console"
+	 * Method to retrieve contact with matching last name and print to console
+	 * or return error if none match. Search ArrayList for all objects with
+	 * matching lastName. Print all info for matching objects to console. If no
+	 * matches found, display message to console stating that no matches are in
+	 * the ArrayList. -EM
 	 */
-	public void retrieveLastName() { // KZ, EM
-		System.out
-				.println(" -- ContactList: METHOD retrieveLastName: Retrieve contact(s) with \n"
-						+ "    matching last name & print to console or return error if none match");
+	public void retrieveLastName() { // EM
+		System.out.println("***In method retrieveLastName()***");
+		Scanner scanLastName = new Scanner(System.in);
+		String searchLastName;
+
+		System.out.print("Last name to search for: ");
+		searchLastName = scanLastName.next();
+
+		System.out.println("Searching for last name " + searchLastName + "...");
+
+		Collections.sort(contactArrayList); // sort the ArrayList in
+											// alphabetical order by name key
+		int i = 0; // index of ArrayList
+		int matchCount = 0; // number of searchLastName matches found
+		while (i < contactArrayList.size()) {
+			Contact thisMatch = new Contact();
+			thisMatch = contactArrayList.get(i);
+			if (searchLastName.equals(thisMatch.getLastName())) {
+				System.out.println("\n" + "Match found for " + searchLastName
+						+ " at index " + i + "!");
+				System.out.println(thisMatch.returnSingleContact());
+				matchCount = matchCount + 1;
+			}
+			i++;
+		}
+		if (matchCount == 0) {
+			System.out.println("Sorry, there are no contacts with last name "
+					+ searchLastName + " in the Contact List.");
+		}
 	}
 
 	/*
-	 * [GOAL] Method to retrieve contact by email and print to console or return
-	 * error if none match -EM
-	 * " -- ContactList: METHOD retrieveEmail: Retrieve contact(s) with matching email & print to console or return error if none match"
-	 * "1. Search for matching email"
-	 * "2. Return matching contact(s) OR return error"
-	 * "3. Call System.out.println(retrieveEmail()) or similar from main to print to console"
+	 * Method to retrieve contact with matching email and print to console or
+	 * return error if none match. Search ArrayList for all objects with
+	 * matching email. Print all info for matching objects to console. If no
+	 * matches found, display message to console stating that no matches are in
+	 * the ArrayList. -EM
 	 */
-	public void retrieveEmail() { // KZ, EM
-		System.out
-				.println(" -- ContactList: METHOD retrieveEmail: Retrieve contact(s) with \n"
-						+ "    matching email & print to console or return error if none match");
+	public void retrieveEmail() { // EM
+		System.out.println("***In method retrieveEmail()***");
+		Scanner scanEmail = new Scanner(System.in);
+		String searchEmail;
+
+		System.out.print("Email to search for: ");
+		searchEmail = scanEmail.next();
+
+		System.out.println("Searching for email " + searchEmail + "...");
+
+		Collections.sort(contactArrayList); // sort the ArrayList in
+											// alphabetical order by name key
+		int i = 0; // index of ArrayList
+		int matchCount = 0; // number of searchEmail matches found
+		while (i < contactArrayList.size()) {
+			Contact thisMatch = new Contact();
+			thisMatch = contactArrayList.get(i);
+			if (searchEmail.equals(thisMatch.getEmail())) {
+				System.out.println("\n" + "Match found for " + searchEmail
+						+ " at index " + i + "!");
+				System.out.println(thisMatch.returnSingleContact());
+				matchCount = matchCount + 1;
+			}
+			i++;
+		}
+		if (matchCount == 0) {
+			System.out.println("Sorry, there are no contacts with email "
+					+ searchEmail + " in the Contact List.");
+		}
 	}
 
 	/*
-	 * [GOAL] Method to retrieve contact by zip and print to console or return
-	 * error if none match -EM
-	 * " -- ContactList: METHOD retrieveEmail: Retrieve contact(s) with matching zip & print to console or return error if none match"
-	 * "1. Search for matching zip"
-	 * "2. Return matching contact(s) OR return error"
-	 * "3. Call System.out.println(retrieveZip()) or similar from main to print to console"
+	 * Method to retrieve contact with matching zip code and print to console or
+	 * return error if none match. Search ArrayList for all objects with
+	 * matching zip. Print all info for matching objects to console. If no
+	 * matches found, display message to console stating that no matches are in
+	 * the ArrayList. -EM
 	 */
-	public void retrieveZip() { // KZ, EM
-		System.out
-				.println(" -- ContactList: METHOD retrieveZip: Retrieve contact(s) with \n"
-						+ "    matching zip & print to console or return error if none match");
+	public void retrieveZip() { // EM
+		System.out.println("***In method retrieveZip()***");
+		Scanner scanZip = new Scanner(System.in);
+		String searchZip;
+
+		System.out.print("Zip code to search for: ");
+		searchZip = scanZip.next();
+
+		System.out.println("Searching for zip code " + searchZip + "...");
+
+		Collections.sort(contactArrayList); // sort the ArrayList in
+											// alphabetical order by name key
+		int i = 0; // index of ArrayList
+		int matchCount = 0; // number of searchZip matches found
+		while (i < contactArrayList.size()) {
+			Contact thisMatch = new Contact();
+			thisMatch = contactArrayList.get(i);
+			if (searchZip.equals(thisMatch.getZip())) {
+				System.out.println("\n" + "Match found for " + searchZip
+						+ " at index " + i + "!");
+				System.out.println(thisMatch.returnSingleContact());
+				matchCount = matchCount + 1;
+			}
+			i++;
+		}
+		if (matchCount == 0) {
+			System.out.println("Sorry, there are no contacts with zip code "
+					+ searchZip + " in the Contact List.");
+		}
 	}
 
 }
