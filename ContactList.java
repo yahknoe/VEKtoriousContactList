@@ -9,6 +9,7 @@ import java.util.Collections; // to manage sorting
 // only use this if I put the exception catch back in.
 import java.util.Scanner; // to get text from user
 import java.io.Serializable; //to write object to file
+import java.io.IOException; //IOException for reading/writing
 
 /*
  * Class to manage and manipulate ContactList objects
