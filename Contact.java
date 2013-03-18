@@ -19,7 +19,7 @@ public class Contact implements Comparable<Contact> { // EM, KZ
 	private String notes;
 	private String key; // key for sorting Contacts EM
 
-	// Constructor with no params
+	// Constructor with no parameters
 	public Contact() {
 	}
 
@@ -43,15 +43,15 @@ public class Contact implements Comparable<Contact> { // EM, KZ
 	 */
 	public Contact readContact() { // KZ. VM
 		Contact thisContact = new Contact();
-		thisContact.setLastName(getLastName());
-		thisContact.setFirstName(getFirstName());
-		thisContact.setStreet(getStreet());
-		thisContact.setCity(getCity());
-		thisContact.setState(getState());
-		thisContact.setZip(getZip());
-		thisContact.setEmail(getEmail());
-		thisContact.setPhone(getPhone());
-		thisContact.setNotes(getNotes());
+		thisContact.setLastName(getFromUserLastName());
+		thisContact.setFirstName(getFromUserFirstName());
+		thisContact.setStreet(getFromUserStreet());
+		thisContact.setCity(getFromUserCity());
+		thisContact.setState(getFromUserState());
+		thisContact.setZip(getFromUserZip());
+		thisContact.setEmail(getFromUserEmail());
+		thisContact.setPhone(getFromUserPhone());
+		thisContact.setNotes(getFromUserNotes());
 		return thisContact;
 	}
 
@@ -61,10 +61,10 @@ public class Contact implements Comparable<Contact> { // EM, KZ
 	public String returnSingleContact() { // KZ, EM
 		System.out
 				.println(" - @ - Class Contact: METHOD printSingleContact: Print out complete contact");
-			return "Contact: " + lastName + ", " + firstName + "\n         "
-			+ street + "\n         " + city + ", " + state + " " + zip
-			+ "\n         " + email + "\n         " + phone + "\n         "
-			+ notes;
+		return "Contact: " + lastName + ", " + firstName + "\n         "
+				+ street + "\n         " + city + ", " + state + " " + zip
+				+ "\n         " + email + "\n         " + phone + "\n         "
+				+ notes;
 	}
 
 	/*
@@ -75,9 +75,10 @@ public class Contact implements Comparable<Contact> { // EM, KZ
 	}
 
 	/*
-	 * Method to get last name. Method does not allow for no last name.
+	 * Method to get last name from user. Method does not allow for no last
+	 * name. // KZ
 	 */
-	public String getLastName() { // EM, KZ
+	public String getFromUserLastName() { // EM, KZ
 		lastName = "";
 		while (lastName.equals("")) { // KZ - Added loop not allowing empty last
 										// name
@@ -91,7 +92,13 @@ public class Contact implements Comparable<Contact> { // EM, KZ
 			}
 		}
 		return lastName;
+	}
 
+	/*
+	 * Method to get previously-set last name
+	 */
+	public String getLastName() {
+		return lastName;
 	}
 
 	/*
@@ -102,12 +109,19 @@ public class Contact implements Comparable<Contact> { // EM, KZ
 	}
 
 	/*
-	 * Method to get first name
+	 * Method to get first name from user
 	 */
-	public String getFirstName() { // EM, KZ
+	public String getFromUserFirstName() { // EM, KZ
 		Scanner reader = new Scanner(System.in);
 		System.out.print("First Name: ");
 		firstName = reader.nextLine();
+		return firstName;
+	}
+
+	/*
+	 * Method to get previously-set first name
+	 */
+	public String getFirstName() {
 		return firstName;
 	}
 
@@ -119,12 +133,19 @@ public class Contact implements Comparable<Contact> { // EM, KZ
 	}
 
 	/*
-	 * Method to get street address
+	 * Method to get street address from user
 	 */
-	public String getStreet() { // EM, KZ
+	public String getFromUserStreet() { // EM, KZ
 		Scanner reader = new Scanner(System.in);
 		System.out.print("Street Address: ");
 		street = reader.nextLine();
+		return street;
+	}
+
+	/*
+	 * Method to get previously-set street address
+	 */
+	public String getStreet() {
 		return street;
 	}
 
@@ -136,12 +157,19 @@ public class Contact implements Comparable<Contact> { // EM, KZ
 	}
 
 	/*
-	 * Method to get city address
+	 * Method to get city address from user
 	 */
-	public String getCity() { // EM, KZ
+	public String getFromUserCity() { // EM, KZ
 		Scanner reader = new Scanner(System.in);
 		System.out.print("City: ");
 		city = reader.nextLine();
+		return city;
+	}
+
+	/*
+	 * Method to get previously-set city address
+	 */
+	public String getCity() {
 		return city;
 	}
 
@@ -153,12 +181,19 @@ public class Contact implements Comparable<Contact> { // EM, KZ
 	}
 
 	/*
-	 * Method to get state
+	 * Method to get state from user
 	 */
-	public String getState() { // EM, KZ
+	public String getFromUserState() { // EM, KZ
 		Scanner reader = new Scanner(System.in);
 		System.out.print("State: ");
 		state = reader.nextLine();
+		return state;
+	}
+
+	/*
+	 * Method to get previously-set state
+	 */
+	public String getState() {
 		return state;
 	}
 
@@ -170,12 +205,19 @@ public class Contact implements Comparable<Contact> { // EM, KZ
 	}
 
 	/*
-	 * Method to get zip code
+	 * Method to get zip code from user
 	 */
-	public String getZip() { // EM, KZ
+	public String getFromUserZip() { // EM, KZ
 		Scanner reader = new Scanner(System.in);
 		System.out.print("Zip: ");
 		zip = reader.nextLine();
+		return zip;
+	}
+
+	/*
+	 * Method to get previously-set zip code
+	 */
+	public String getZip() {
 		return zip;
 	}
 
@@ -187,10 +229,10 @@ public class Contact implements Comparable<Contact> { // EM, KZ
 	}
 
 	/*
-	 * Method to get phone number. Method includes phone number validation. //
-	 * KZ
+	 * Method to get phone number from user. Method includes phone number
+	 * validation. // KZ
 	 */
-	public String getPhone() { // KZ, EM, KZ
+	public String getFromUserPhone() { // KZ, EM, KZ
 		final String VALID_PHONE_NUMBER_PATTERN = "[0-9]{3}-[0-9]{3}-[0-9]{4}"; // KZ
 		while (true) {
 			Scanner reader = new Scanner(System.in);
@@ -208,6 +250,13 @@ public class Contact implements Comparable<Contact> { // EM, KZ
 	}
 
 	/*
+	 * Method to get previously-set phone number
+	 */
+	public String getPhone() {
+		return phone;
+	}
+
+	/*
 	 * Method to set email address
 	 */
 	public void setEmail(String e) { // KZ, EM
@@ -215,9 +264,10 @@ public class Contact implements Comparable<Contact> { // EM, KZ
 	}
 
 	/*
-	 * Method to get email address. Method includes email validation. // KZ
+	 * Method to get email address from user. Method includes email validation.
+	 * // KZ
 	 */
-	public String getEmail() { // EM, KZ
+	public String getFromUserEmail() { // EM, KZ
 		final String VALID_EMAIL_PATTERN = ("[a-zA-Z0-9._-]+@[a-zA-Z0-9_-]+.[a-zA-Z]{3}"); // KZ
 		while (true) {
 			Scanner reader = new Scanner(System.in);
@@ -237,6 +287,13 @@ public class Contact implements Comparable<Contact> { // EM, KZ
 	}
 
 	/*
+	 * Method to get previously-set email address
+	 */
+	public String getEmail() {
+		return email;
+	}
+
+	/*
 	 * Method to set notes
 	 */
 	public void setNotes(String n) { // KZ, EM
@@ -244,12 +301,19 @@ public class Contact implements Comparable<Contact> { // EM, KZ
 	}
 
 	/*
-	 * Method to get notes
+	 * Method to get notes from user
 	 */
-	public String getNotes() { // EM, KZ
+	public String getFromUserNotes() { // EM, KZ
 		Scanner reader = new Scanner(System.in);
 		System.out.print("Notes: ");
 		notes = reader.nextLine();
+		return notes;
+	}
+
+	/*
+	 * Method to get previously-set notes
+	 */
+	public String getNotes() {
 		return notes;
 	}
 
