@@ -1,11 +1,12 @@
 import java.util.Scanner; //for user input
+import java.io.Serializable; //to write objects to file
 
 /*
  * One object of this class represents a single contact, including first name,
  * last name, street address, city, state, zip code, email address, phone
  * number, and notes.
  */
-public class Contact implements Comparable<Contact> { // EM, KZ
+public class Contact implements Serializable, Comparable<Contact> { // EM, KZ
 
 	// ---------- VARIABLES ----------
 	private String lastName;
