@@ -96,8 +96,6 @@ public class ContactList implements Serializable { // KZ.
 
 		System.out.println("switch menuChoice: quit");
 		System.out.println("Thank you for using the contact list!");
-		writeFile();
-
 	}
 
 	/*
