@@ -6,7 +6,7 @@ public class TestContactList { // KZ.
 	/*
 	 * ---------- MAIN ----------
 	 */
-	public static void main(String[] args) { // KZ.
+	public static void main(String[] args) throws ClassNotFoundException, IOException { // KZ.
 
 		// create new objects to call non-static methods from
 		// ContactList & Contact classes -EM
@@ -20,7 +20,7 @@ public class TestContactList { // KZ.
 
 		// read all contacts from disk
 		System.out.println(" ** 02 - TestContactList: demoContactList.readFile()");
-		demoContactList.readFile(); // KZ. read file from disk
+		demoContactList = demoContactList.readFile(); // KZ. read file from disk
 
 		// loop to be implemented to repeat menu until user quits
 		System.out.println(" ** 03 - TestContactList: demoContactList.menu()");
@@ -42,7 +42,7 @@ public class TestContactList { // KZ.
 
 		// end of loop means user quit; save to disk
 		System.out.println(" ** 10 -TestContactList: demoContactList.writeFile()");
-		demoContactList.writeFile(); // KZ. write changes to disk
+		demoContactList.writeFile(demoContactList); // KZ. write changes to disk
 	}
 }
 
