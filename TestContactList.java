@@ -1,3 +1,4 @@
+import java.io.IOException; //IOException for reading/writing
 /*
  * Create, manipulate, and access contacts in contact list
  */
