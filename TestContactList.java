@@ -70,9 +70,26 @@ public class TestContactList { // KZ.
         (5) Retrieve contact(s) by zip code
         (6) Quit Contact List Program
 --------------------------------------------------------
-  What would you like to do? (Enter option from above): 2
-switch menuChoice: print
-The Contact List is empty. Please add a new contact!
+  What would you like to do? (Enter option from above): 1
+Last Name: Ayoub
+First Name: Abil
+Street Address: 2184 Peachtree Ln
+City: San Jose
+State: CA
+Zip: 95128
+Email Address: asmanghori@gmail.com
+Phone Number: 408-836-1742
+Notes: Ayoub by any other name
+Is this infomation correct?
+ - @ - Class Contact: METHOD printSingleContact: Print out complete contact
+Contact: Ayoub, Abil
+         2184 Peachtree Ln
+         San Jose, CA 95128
+         asmanghori@gmail.com
+         408-836-1742
+         Ayoub by any other name
+Please confirm (y/n): y
+Added to Contact List...
 --------------------------------------------------------
 --------------------   MAIN MENU:   --------------------
 --------------------------------------------------------
@@ -85,66 +102,25 @@ The Contact List is empty. Please add a new contact!
 --------------------------------------------------------
   What would you like to do? (Enter option from above): 1
 switch menuChoice: new
-Last Name: Llo
-First Name: He
-Street Address: 123 Yay Dr.
-City: Yippee
-State: HA
-Zip: 12345
-Email Address: VEK@win.us
---- You did not enter a valid email address. 
---- Please enter a email address in the following format: 
-         yoururl_01@somplace.xxx 
-    or   your.url_02@somplace.xxx 
-
-Email Address: VEK@win.usa
-Phone Number: yay
---- You did not enter a valid US phone number. 
---- Please enter a phone number in the following format: XXX-XXX-XXXX.
-Phone Number: 123-456-7890
-Notes: Lookin' good, feelin' fine.
---------------------------------------------------------
---------------------   MAIN MENU:   --------------------
---------------------------------------------------------
-        (1) New contact
-        (2) Print contact list
-        (3) Retrieve contact(s) by last name
-        (4) Retrieve contact(s) by email address
-        (5) Retrieve contact(s) by zip code
-        (6) Quit Contact List Program
---------------------------------------------------------
-  What would you like to do? (Enter option from above): 1
-switch menuChoice: new
-Last Name: Sort
-First Name: AlphabetInTheRoom
-Street Address: 456 Zoo Ln.
-City: Tuscany
-State: :)
-Zip: 98765
-Email Address: list@sorted.yup
-Phone Number: 987-654-3210
-Notes: Notable, but only just.
---------------------------------------------------------
---------------------   MAIN MENU:   --------------------
---------------------------------------------------------
-        (1) New contact
-        (2) Print contact list
-        (3) Retrieve contact(s) by last name
-        (4) Retrieve contact(s) by email address
-        (5) Retrieve contact(s) by zip code
-        (6) Quit Contact List Program
---------------------------------------------------------
-  What would you like to do? (Enter option from above): 1
-switch menuChoice: new
-Last Name: Sort
-First Name: Yourself
-Street Address: 654 Aquarium Ave.
-City: Tuscany
-State: :)
-Zip: 98765
-Email Address: list@sorted.yup
-Phone Number: 246-801-3579
-Notes: Parents decided not to name "AlphabetInTheRoom Jr."
+Last Name: Smith
+First Name: Edward 
+Street Address: 1045 Hutchinson Ave.
+City: Palo Alto
+State: CA
+Zip: 94301
+Email Address: edsmith@yahoo.com
+Phone Number: 650-322-2462
+Notes: The most dull of fellows
+Is this infomation correct?
+ - @ - Class Contact: METHOD printSingleContact: Print out complete contact
+Contact: Smith, Edward 
+         1045 Hutchinson Ave.
+         Palo Alto, CA 94301
+         edsmith@yahoo.com
+         650-322-2462
+         The most dull of fellows
+Please confirm (y/n): y
+Added to Contact List...
 --------------------------------------------------------
 --------------------   MAIN MENU:   --------------------
 --------------------------------------------------------
@@ -158,26 +134,50 @@ Notes: Parents decided not to name "AlphabetInTheRoom Jr."
   What would you like to do? (Enter option from above): 2
 switch menuChoice: print
  - @ - Class Contact: METHOD printSingleContact: Print out complete contact
-Contact: Llo, He
-         123 Yay Dr.
-         Yippee, HA 12345
-         VEK@win.usa
-         123-456-7890
-         Lookin' good, feelin' fine.
+Contact: Ayoub, Abil
+         2184 Peachtree Ln
+         San Jose, CA 95128
+         asmanghori@gmail.com
+         408-836-1742
+         Ayoub by any other name
  - @ - Class Contact: METHOD printSingleContact: Print out complete contact
-Contact: Sort, AlphabetInTheRoom
-         456 Zoo Ln.
-         Tuscany, :) 98765
-         list@sorted.yup
-         987-654-3210
-         Notable, but only just.
+Contact: Smith, Edward 
+         1045 Hutchinson Ave.
+         Palo Alto, CA 94301
+         edsmith@yahoo.com
+         650-322-2462
+         The most dull of fellows
+--------------------------------------------------------
+--------------------   MAIN MENU:   --------------------
+--------------------------------------------------------
+        (1) New contact
+        (2) Print contact list
+        (3) Retrieve contact(s) by last name
+        (4) Retrieve contact(s) by email address
+        (5) Retrieve contact(s) by zip code
+        (6) Quit Contact List Program
+--------------------------------------------------------
+  What would you like to do? (Enter option from above): 1
+switch menuChoice: new
+Last Name: Smith
+First Name: Tabitha
+Street Address: 1045 Hutchinson Ave.
+City: Palo Alto
+State: CA
+Zip: 94301
+Email Address: tabsmith@yahoo.com
+Phone Number: 650-322-2462
+Notes: Well-matched to that dull fellow
+Is this infomation correct?
  - @ - Class Contact: METHOD printSingleContact: Print out complete contact
-Contact: Sort, Yourself
-         654 Aquarium Ave.
-         Tuscany, :) 98765
-         list@sorted.yup
-         246-801-3579
-         Parents decided not to name "AlphabetInTheRoom Jr."
+Contact: Smith, Tabitha
+         1045 Hutchinson Ave.
+         Palo Alto, CA 94301
+         tabsmith@yahoo.com
+         650-322-2462
+         Well-matched to that dull fellow
+Please confirm (y/n): y
+Added to Contact List...
 --------------------------------------------------------
 --------------------   MAIN MENU:   --------------------
 --------------------------------------------------------
@@ -190,67 +190,24 @@ Contact: Sort, Yourself
 --------------------------------------------------------
   What would you like to do? (Enter option from above): 3
 switch menuChoice: last
-***In method retrieveLastName()***
-Last name to search for: Llo
-Searching for last name Llo...
-
-Match found for Llo at index 0!
+Last name to search for: Smith
+Searching for last name Smith...
  - @ - Class Contact: METHOD printSingleContact: Print out complete contact
-Contact: Llo, He
-         123 Yay Dr.
-         Yippee, HA 12345
-         VEK@win.usa
-         123-456-7890
-         Lookin' good, feelin' fine.
---------------------------------------------------------
---------------------   MAIN MENU:   --------------------
---------------------------------------------------------
-        (1) New contact
-        (2) Print contact list
-        (3) Retrieve contact(s) by last name
-        (4) Retrieve contact(s) by email address
-        (5) Retrieve contact(s) by zip code
-        (6) Quit Contact List Program
---------------------------------------------------------
-  What would you like to do? (Enter option from above): 3
-switch menuChoice: last
-***In method retrieveLastName()***
-Last name to search for: Sort
-Searching for last name Sort...
-
-Match found for Sort at index 1!
+Contact: Smith, Edward 
+         1045 Hutchinson Ave.
+         Palo Alto, CA 94301
+         edsmith@yahoo.com
+         650-322-2462
+         The most dull of fellows
  - @ - Class Contact: METHOD printSingleContact: Print out complete contact
-Contact: Sort, AlphabetInTheRoom
-         456 Zoo Ln.
-         Tuscany, :) 98765
-         list@sorted.yup
-         987-654-3210
-         Notable, but only just.
+Contact: Smith, Tabitha
+         1045 Hutchinson Ave.
+         Palo Alto, CA 94301
+         tabsmith@yahoo.com
+         650-322-2462
+         Well-matched to that dull fellow
 
-Match found for Sort at index 2!
- - @ - Class Contact: METHOD printSingleContact: Print out complete contact
-Contact: Sort, Yourself
-         654 Aquarium Ave.
-         Tuscany, :) 98765
-         list@sorted.yup
-         246-801-3579
-         Parents decided not to name "AlphabetInTheRoom Jr."
---------------------------------------------------------
---------------------   MAIN MENU:   --------------------
---------------------------------------------------------
-        (1) New contact
-        (2) Print contact list
-        (3) Retrieve contact(s) by last name
-        (4) Retrieve contact(s) by email address
-        (5) Retrieve contact(s) by zip code
-        (6) Quit Contact List Program
---------------------------------------------------------
-  What would you like to do? (Enter option from above): 3
-switch menuChoice: last
-***In method retrieveLastName()***
-Last name to search for: NotHere
-Searching for last name NotHere...
-Sorry, there are no contacts with last name NotHere in the Contact List.
+2 matches found for last name Smith!
 --------------------------------------------------------
 --------------------   MAIN MENU:   --------------------
 --------------------------------------------------------
@@ -263,67 +220,17 @@ Sorry, there are no contacts with last name NotHere in the Contact List.
 --------------------------------------------------------
   What would you like to do? (Enter option from above): 4
 switch menuChoice: email
-***In method retrieveEmail()***
-Email to search for: VEK@win.usa
-Searching for email VEK@win.usa...
-
-Match found for VEK@win.usa at index 0!
+Email to search for: asmanghori@gmail.com
+Searching for email asmanghori@gmail.com...
  - @ - Class Contact: METHOD printSingleContact: Print out complete contact
-Contact: Llo, He
-         123 Yay Dr.
-         Yippee, HA 12345
-         VEK@win.usa
-         123-456-7890
-         Lookin' good, feelin' fine.
---------------------------------------------------------
---------------------   MAIN MENU:   --------------------
---------------------------------------------------------
-        (1) New contact
-        (2) Print contact list
-        (3) Retrieve contact(s) by last name
-        (4) Retrieve contact(s) by email address
-        (5) Retrieve contact(s) by zip code
-        (6) Quit Contact List Program
---------------------------------------------------------
-  What would you like to do? (Enter option from above): 4
-switch menuChoice: email
-***In method retrieveEmail()***
-Email to search for: list@sorted.yup
-Searching for email list@sorted.yup...
+Contact: Ayoub, Abil
+         2184 Peachtree Ln
+         San Jose, CA 95128
+         asmanghori@gmail.com
+         408-836-1742
+         Ayoub by any other name
 
-Match found for list@sorted.yup at index 1!
- - @ - Class Contact: METHOD printSingleContact: Print out complete contact
-Contact: Sort, AlphabetInTheRoom
-         456 Zoo Ln.
-         Tuscany, :) 98765
-         list@sorted.yup
-         987-654-3210
-         Notable, but only just.
-
-Match found for list@sorted.yup at index 2!
- - @ - Class Contact: METHOD printSingleContact: Print out complete contact
-Contact: Sort, Yourself
-         654 Aquarium Ave.
-         Tuscany, :) 98765
-         list@sorted.yup
-         246-801-3579
-         Parents decided not to name "AlphabetInTheRoom Jr."
---------------------------------------------------------
---------------------   MAIN MENU:   --------------------
---------------------------------------------------------
-        (1) New contact
-        (2) Print contact list
-        (3) Retrieve contact(s) by last name
-        (4) Retrieve contact(s) by email address
-        (5) Retrieve contact(s) by zip code
-        (6) Quit Contact List Program
---------------------------------------------------------
-  What would you like to do? (Enter option from above): 4
-switch menuChoice: email
-***In method retrieveEmail()***
-Email to search for: nothere@here.not
-Searching for email nothere@here.not...
-Sorry, there are no contacts with email nothere@here.not in the Contact List.
+1 match found for email asmanghori@gmail.com!
 --------------------------------------------------------
 --------------------   MAIN MENU:   --------------------
 --------------------------------------------------------
@@ -336,18 +243,10 @@ Sorry, there are no contacts with email nothere@here.not in the Contact List.
 --------------------------------------------------------
   What would you like to do? (Enter option from above): 5
 switch menuChoice: zip
-***In method retrieveZip()***
-Zip code to search for: 12345
-Searching for zip code 12345...
+Zip code to search for: 94041
+Searching for zip code 94041...
 
-Match found for 12345 at index 0!
- - @ - Class Contact: METHOD printSingleContact: Print out complete contact
-Contact: Llo, He
-         123 Yay Dr.
-         Yippee, HA 12345
-         VEK@win.usa
-         123-456-7890
-         Lookin' good, feelin' fine.
+Sorry, there are no contacts with zip code 94041 in the Contact List.
 --------------------------------------------------------
 --------------------   MAIN MENU:   --------------------
 --------------------------------------------------------
@@ -358,31 +257,8 @@ Contact: Llo, He
         (5) Retrieve contact(s) by zip code
         (6) Quit Contact List Program
 --------------------------------------------------------
-  What would you like to do? (Enter option from above): 98765
-You have entered an invalid choice. Please re-enter your menu choice
-5
-switch menuChoice: zip
-***In method retrieveZip()***
-Zip code to search for: 98765
-Searching for zip code 98765...
-
-Match found for 98765 at index 1!
- - @ - Class Contact: METHOD printSingleContact: Print out complete contact
-Contact: Sort, AlphabetInTheRoom
-         456 Zoo Ln.
-         Tuscany, :) 98765
-         list@sorted.yup
-         987-654-3210
-         Notable, but only just.
-
-Match found for 98765 at index 2!
- - @ - Class Contact: METHOD printSingleContact: Print out complete contact
-Contact: Sort, Yourself
-         654 Aquarium Ave.
-         Tuscany, :) 98765
-         list@sorted.yup
-         246-801-3579
-         Parents decided not to name "AlphabetInTheRoom Jr."
+  What would you like to do? (Enter option from above): 94301
+You have entered an invalid choice. Please re-enter your menu choice.
 --------------------------------------------------------
 --------------------   MAIN MENU:   --------------------
 --------------------------------------------------------
@@ -395,10 +271,24 @@ Contact: Sort, Yourself
 --------------------------------------------------------
   What would you like to do? (Enter option from above): 5
 switch menuChoice: zip
-***In method retrieveZip()***
-Zip code to search for: 99999
-Searching for zip code 99999...
-Sorry, there are no contacts with zip code 99999 in the Contact List.
+Zip code to search for: 94301
+Searching for zip code 94301...
+ - @ - Class Contact: METHOD printSingleContact: Print out complete contact
+Contact: Smith, Edward 
+         1045 Hutchinson Ave.
+         Palo Alto, CA 94301
+         edsmith@yahoo.com
+         650-322-2462
+         The most dull of fellows
+ - @ - Class Contact: METHOD printSingleContact: Print out complete contact
+Contact: Smith, Tabitha
+         1045 Hutchinson Ave.
+         Palo Alto, CA 94301
+         tabsmith@yahoo.com
+         650-322-2462
+         Well-matched to that dull fellow
+
+2 matches found for zip code 94301!
 --------------------------------------------------------
 --------------------   MAIN MENU:   --------------------
 --------------------------------------------------------
@@ -412,8 +302,6 @@ Sorry, there are no contacts with zip code 99999 in the Contact List.
   What would you like to do? (Enter option from above): 6
 switch menuChoice: quit
 Thank you for using the contact list!
- -- ContactList: METHOD writeFile: Write Contact object data from 
-    ArrayList to file
  ** 04 - TestContactList: REMOVED ‚Ä¢‚Ä¢¬†demoContact.readContact()
  ** 05 - TestContactList: demoContact.returnSingleContact()
  - @ - Class Contact: METHOD printSingleContact: Print out complete contact
@@ -425,30 +313,28 @@ Contact: null, null
          null
  ** 06 - TestContactList: demoContactList.printList()
  - @ - Class Contact: METHOD printSingleContact: Print out complete contact
-Contact: Llo, He
-         123 Yay Dr.
-         Yippee, HA 12345
-         VEK@win.usa
-         123-456-7890
-         Lookin' good, feelin' fine.
+Contact: Ayoub, Abil
+         2184 Peachtree Ln
+         San Jose, CA 95128
+         asmanghori@gmail.com
+         408-836-1742
+         Ayoub by any other name
  - @ - Class Contact: METHOD printSingleContact: Print out complete contact
-Contact: Sort, AlphabetInTheRoom
-         456 Zoo Ln.
-         Tuscany, :) 98765
-         list@sorted.yup
-         987-654-3210
-         Notable, but only just.
+Contact: Smith, Edward 
+         1045 Hutchinson Ave.
+         Palo Alto, CA 94301
+         edsmith@yahoo.com
+         650-322-2462
+         The most dull of fellows
  - @ - Class Contact: METHOD printSingleContact: Print out complete contact
-Contact: Sort, Yourself
-         654 Aquarium Ave.
-         Tuscany, :) 98765
-         list@sorted.yup
-         246-801-3579
-         Parents decided not to name "AlphabetInTheRoom Jr."
+Contact: Smith, Tabitha
+         1045 Hutchinson Ave.
+         Palo Alto, CA 94301
+         tabsmith@yahoo.com
+         650-322-2462
+         Well-matched to that dull fellow
  ** 07 - TestContactList: demoContactList.retrieveLastName()
  ** 08 -TestContactList: demoContactList.retrieveEmail()
  ** 09 -TestContactList: demoContactList.retrieveZip()
  ** 10 -TestContactList: demoContactList.writeFile()
- -- ContactList: METHOD writeFile: Write Contact object data from 
-    ArrayList to file
-*/
+ */
