@@ -42,17 +42,27 @@ public class Contact implements Serializable, Comparable<Contact> { // EM, KZ
 	/*
 	 * Method to create a single contact and set values
 	 */
-	public Contact readContact() { // KZ. VM
+	public Contact readContact() { // KZ. VP
 		Contact thisContact = new Contact();
-		thisContact.setLastName(getFromUserLastName());
-		thisContact.setFirstName(getFromUserFirstName());
-		thisContact.setStreet(getFromUserStreet());
-		thisContact.setCity(getFromUserCity());
-		thisContact.setState(getFromUserState());
-		thisContact.setZip(getFromUserZip());
-		thisContact.setEmail(getFromUserEmail());
-		thisContact.setPhone(getFromUserPhone());
-		thisContact.setNotes(getFromUserNotes());
+		Scanner reader = new Scanner(System.in);
+		String confirm;
+		do {
+			thisContact.setLastName(getFromUserLastName());
+			thisContact.setFirstName(getFromUserFirstName());
+			thisContact.setStreet(getFromUserStreet());
+			thisContact.setCity(getFromUserCity());
+			thisContact.setState(getFromUserState());
+			thisContact.setZip(getFromUserZip());
+			thisContact.setEmail(getFromUserEmail());
+			thisContact.setPhone(getFromUserPhone());
+			thisContact.setNotes(getFromUserNotes());
+			System.out.println("Is this infomation correct?");
+			System.out.println(thisContact.returnSingleContact());
+			System.out.print("Please confirm (y/n): ");
+			confirm = reader.nextLine();
+		}
+		while (!confirm.equals("y"));
+		System.out.println("Added to Contact List...");
 		return thisContact;
 	}
 
