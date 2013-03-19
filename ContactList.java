@@ -110,7 +110,7 @@ public class ContactList implements Serializable { // KZ.
 	 * Method to read contactArrayList object from saved file -VP
 	 */
 	public ContactList readFile() throws IOException, ClassNotFoundException {
-		FileInputStream fis = new FileInputStream("file.sav");
+		FileInputStream fis = new FileInputStream("ContactList.sav");
 		ObjectInputStream ois = new ObjectInputStream(fis);
 		return (ContactList) ois.readObject();
 	}
@@ -119,7 +119,7 @@ public class ContactList implements Serializable { // KZ.
 	 * Method to save contactArrayList object to file -VP
 	 */
 	public void writeFile(ContactList list) throws IOException {
-		FileOutputStream fos = new FileOutputStream("file.sav");
+		FileOutputStream fos = new FileOutputStream("ContactList.sav");
 		ObjectOutputStream oos = new ObjectOutputStream(fos);
 		oos.writeObject(list);
 		oos.close();
