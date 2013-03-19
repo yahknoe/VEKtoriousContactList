@@ -58,12 +58,12 @@ public class ContactList implements Serializable { // KZ.
 		menuChoice = scanner.nextInt();
 
 		while (menuChoice != 6) {
-
-			while (menuChoice < 1 || menuChoice > 6) {
-				System.out
-						.println("You have entered an invalid choice. Please re-enter your menu choice");
-				menuChoice = scanner.nextInt();
-			}
+			//uncessary to check if int entered is out of range... that is what default is for -VP
+			//while (menuChoice < 1 || menuChoice > 6) {
+			//	System.out
+			//	.println("You have entered an invalid choice. Please re-enter your menu choice");
+			//	menuChoice = scanner.nextInt();
+			//}
 			switch (menuChoice) {
 			case 1:
 				System.out.println("switch menuChoice: new");
@@ -86,8 +86,7 @@ public class ContactList implements Serializable { // KZ.
 				retrieveZip();
 				break;
 			default:
-				System.out
-						.println("switch menuChoice: WHAT IS / DO WE NEED DEFAULT??");
+				System.out.println("You have entered an invalid choice. Please re-enter your menu choice.");
 				break;
 			}
 
