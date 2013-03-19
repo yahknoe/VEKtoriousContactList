@@ -3,7 +3,6 @@ import java.io.FileInputStream; //input stream to read data from a file
 import java.io.ObjectOutputStream; //to serialize objects to an output stream
 import java.io.ObjectInputStream; //to read serialized objects from a input stream
 import java.util.ArrayList; //to manage the ArrayList
-//import java.util.Comparator; // to manage sorting
 import java.util.Collections; // to manage sorting
 // import java.util.InputMismatchException; // to catch errors when eliciting menu choice from user
 // only use this if I put the exception catch back in.
@@ -14,6 +13,7 @@ import java.io.IOException; //IOException for reading/writing
 /*
  * Class to manage and manipulate ContactList objects
  */
+
 public class ContactList implements Serializable { // KZ.
 
 	// ---------- VARIABLES ----------
@@ -58,12 +58,13 @@ public class ContactList implements Serializable { // KZ.
 		menuChoice = scanner.nextInt();
 
 		while (menuChoice != 6) {
-			//uncessary to check if int entered is out of range... that is what default is for -VP
-			//while (menuChoice < 1 || menuChoice > 6) {
-			//	System.out
-			//	.println("You have entered an invalid choice. Please re-enter your menu choice");
-			//	menuChoice = scanner.nextInt();
-			//}
+			// unnecessary to check if int entered is out of range... that is what
+			// default is for -VP
+			// while (menuChoice < 1 || menuChoice > 6) {
+			// System.out
+			// .println("You have entered an invalid choice. Please re-enter your menu choice");
+			// menuChoice = scanner.nextInt();
+			// }
 			switch (menuChoice) {
 			case 1:
 				System.out.println("switch menuChoice: new");
@@ -86,7 +87,8 @@ public class ContactList implements Serializable { // KZ.
 				retrieveZip();
 				break;
 			default:
-				System.out.println("You have entered an invalid choice. Please re-enter your menu choice.");
+				System.out
+						.println("You have entered an invalid choice. Please re-enter your menu choice.");
 				break;
 			}
 
@@ -97,21 +99,28 @@ public class ContactList implements Serializable { // KZ.
 		System.out.println("switch menuChoice: quit");
 		System.out.println("Thank you for using the contact list!");
 	}
+	// Notes for menu try-catch (remove for final version!). -EM, 03/18/13
+	// try {
+	// } catch (InputMismatchException e){
+	// System.out
+	// .println("You have entered an invalid choice. Please enter a menu choice from 1 to 6.");
+	// }
 
 	/*
 	 * Method to read contactArrayList object from saved file -VP
 	 */
 	public ContactList readFile() throws IOException, ClassNotFoundException {
 		FileInputStream fis = new FileInputStream("file.sav");
-        	ObjectInputStream ois = new ObjectInputStream(fis);
-       		return (ContactList) ois.readObject();
+		ObjectInputStream ois = new ObjectInputStream(fis);
+		return (ContactList) ois.readObject();
 	}
+
 	/*
 	 * Method to save contactArrayList object to file -VP
 	 */
 	public void writeFile(ContactList list) throws IOException {
 		FileOutputStream fos = new FileOutputStream("file.sav");
-        	ObjectOutputStream oos = new ObjectOutputStream(fos);
+		ObjectOutputStream oos = new ObjectOutputStream(fos);
 		oos.writeObject(list);
 		oos.close();
 	}
@@ -162,7 +171,6 @@ public class ContactList implements Serializable { // KZ.
 	 * the ArrayList. -EM
 	 */
 	public void retrieveLastName() { // EM
-		System.out.println("***In method retrieveLastName()***");
 		Scanner scanLastName = new Scanner(System.in);
 		String searchLastName;
 
@@ -179,16 +187,21 @@ public class ContactList implements Serializable { // KZ.
 			Contact thisMatch = new Contact();
 			thisMatch = contactArrayList.get(i);
 			if (searchLastName.equals(thisMatch.getLastName())) {
-				System.out.println("\n" + "Match found for " + searchLastName
-						+ " at index " + i + "!");
 				System.out.println(thisMatch.returnSingleContact());
 				matchCount = matchCount + 1;
 			}
 			i++;
 		}
 		if (matchCount == 0) {
-			System.out.println("Sorry, there are no contacts with last name "
+			System.out.println("\n"
+					+ "Sorry, there are no contacts with last name "
 					+ searchLastName + " in the Contact List.");
+		} else if (matchCount == 1) {
+			System.out.println("\n" + "1 match found for last name "
+					+ searchLastName + "!");
+		} else {
+			System.out.println("\n" + matchCount
+					+ " matches found for last name " + searchLastName + "!");
 		}
 	}
 
@@ -200,7 +213,6 @@ public class ContactList implements Serializable { // KZ.
 	 * the ArrayList. -EM
 	 */
 	public void retrieveEmail() { // EM
-		System.out.println("***In method retrieveEmail()***");
 		Scanner scanEmail = new Scanner(System.in);
 		String searchEmail;
 
@@ -217,16 +229,21 @@ public class ContactList implements Serializable { // KZ.
 			Contact thisMatch = new Contact();
 			thisMatch = contactArrayList.get(i);
 			if (searchEmail.equals(thisMatch.getEmail())) {
-				System.out.println("\n" + "Match found for " + searchEmail
-						+ " at index " + i + "!");
 				System.out.println(thisMatch.returnSingleContact());
 				matchCount = matchCount + 1;
 			}
 			i++;
 		}
 		if (matchCount == 0) {
-			System.out.println("Sorry, there are no contacts with email "
-					+ searchEmail + " in the Contact List.");
+			System.out.println("\n"
+					+ "Sorry, there are no contacts with email " + searchEmail
+					+ " in the Contact List.");
+		} else if (matchCount == 1) {
+			System.out.println("\n" + "1 match found for email " + searchEmail
+					+ "!");
+		} else {
+			System.out.println("\n" + matchCount + " matches found for email "
+					+ searchEmail + "!");
 		}
 	}
 
@@ -238,7 +255,6 @@ public class ContactList implements Serializable { // KZ.
 	 * the ArrayList. -EM
 	 */
 	public void retrieveZip() { // EM
-		System.out.println("***In method retrieveZip()***");
 		Scanner scanZip = new Scanner(System.in);
 		String searchZip;
 
@@ -255,16 +271,21 @@ public class ContactList implements Serializable { // KZ.
 			Contact thisMatch = new Contact();
 			thisMatch = contactArrayList.get(i);
 			if (searchZip.equals(thisMatch.getZip())) {
-				System.out.println("\n" + "Match found for " + searchZip
-						+ " at index " + i + "!");
 				System.out.println(thisMatch.returnSingleContact());
 				matchCount = matchCount + 1;
 			}
 			i++;
 		}
 		if (matchCount == 0) {
-			System.out.println("Sorry, there are no contacts with zip code "
-					+ searchZip + " in the Contact List.");
+			System.out.println("\n"
+					+ "Sorry, there are no contacts with zip code " + searchZip
+					+ " in the Contact List.");
+		} else if (matchCount == 1) {
+			System.out.println("\n" + "1 match found for zip code " + searchZip
+					+ "!");
+		} else {
+			System.out.println("\n" + matchCount
+					+ " matches found for zip code " + searchZip + "!");
 		}
 	}
 
