@@ -16,8 +16,9 @@ public class TestContactList { // KZ.
 		Contact demoContact; // EM
 		demoContact = new Contact(); // EM
 		
-		System.out.println(" ** 01 - TestContactList: print demoContact");
-		System.out.println("    demoContact: " + demoContact);
+		//REMOVED -- this prints the memory location of the empty ArrayList... -VP
+		//System.out.println(" ** 01 - TestContactList: print demoContact");
+		//System.out.println("    demoContact: " + demoContact);
 
 		// read all contacts from disk
 		System.out.println(" ** 02 - TestContactList: demoContactList.readFile()");
