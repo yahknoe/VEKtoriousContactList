@@ -13,7 +13,6 @@ import java.io.IOException; //IOException for reading/writing
 /*
  * Class to manage and manipulate ContactList objects
  */
-
 public class ContactList implements Serializable { // KZ.
 
 	// ---------- VARIABLES ----------
@@ -43,7 +42,7 @@ public class ContactList implements Serializable { // KZ.
 	}
 
 	/*
-	 * " -- ContactList: METHOD menu: Scan for menu options choice from user and execute options"
+	 * METHOD menu: Scan for menu options choice from user and execute options
 	 */
 	public void menu() { // KZ
 		System.out
@@ -58,13 +57,6 @@ public class ContactList implements Serializable { // KZ.
 		menuChoice = scanner.nextInt();
 
 		while (menuChoice != 6) {
-			// unnecessary to check if int entered is out of range... that is what
-			// default is for -VP
-			// while (menuChoice < 1 || menuChoice > 6) {
-			// System.out
-			// .println("You have entered an invalid choice. Please re-enter your menu choice");
-			// menuChoice = scanner.nextInt();
-			// }
 			switch (menuChoice) {
 			case 1:
 				System.out.println("switch menuChoice: new");
@@ -282,5 +274,4 @@ public class ContactList implements Serializable { // KZ.
 					+ " matches found for zip code " + searchZip + "!");
 		}
 	}
-
 }
