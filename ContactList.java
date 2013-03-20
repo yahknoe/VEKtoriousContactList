@@ -102,11 +102,28 @@ public class ContactList implements Serializable { // KZ.
 	 * Method to read contactArrayList object from saved file -VP
 	 */
 	public ContactList readFile() throws IOException, ClassNotFoundException {
-		FileInputStream fis = new FileInputStream("ContactList.sav");
-		ObjectInputStream ois = new ObjectInputStream(fis);
+		FileInputStream fis = null;
+		ObjectInputStream ois = null;
+		try {
+			fis = new FileInputStream("ContactList.sav");
+			ois = new ObjectInputStream(fis);
+			return (ContactList) ois.readObject();
+		}
+		catch (IOException e) {
+			System.out.println("Please check ContactList.sav and try again.");
+		}
+		finally {
+			if (ois != null){
+				try {
+					ois.close();
+				}
+				catch (IOException e) {
+					System.out.println("Please check ContactList.sav and try again.");
+				}
+			}
+		}
 		return (ContactList) ois.readObject();
 	}
-
 	/*
 	 * Method to save contactArrayList object to file -VP
 	 */
