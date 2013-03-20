@@ -158,7 +158,7 @@ public class ContactList implements Serializable { // KZ.
 		} else {
 			for (i = 0; i < contactArrayList.size(); i++) {
 				System.out.println(contactArrayList.get(i) // EM, VP
-						.returnSingleContact());
+						.toString());
 			}
 		}
 	}
@@ -185,7 +185,7 @@ public class ContactList implements Serializable { // KZ.
 			Contact thisMatch = new Contact();
 			thisMatch = contactArrayList.get(i);
 			if (searchLastName.equalsIgnoreCase(thisMatch.getLastName())) {
-				System.out.println(thisMatch.returnSingleContact());
+				System.out.println(thisMatch.toString());
 				matchCount = matchCount + 1;
 			}
 			i++;
@@ -225,7 +225,7 @@ public class ContactList implements Serializable { // KZ.
 			Contact thisMatch = new Contact();
 			thisMatch = contactArrayList.get(i);
 			if (searchEmail.equalsIgnoreCase(thisMatch.getEmail())) {
-				System.out.println(thisMatch.returnSingleContact());
+				System.out.println(thisMatch.toString());
 				matchCount = matchCount + 1;
 			}
 			i++;
@@ -265,7 +265,7 @@ public class ContactList implements Serializable { // KZ.
 			Contact thisMatch = new Contact();
 			thisMatch = contactArrayList.get(i);
 			if (searchZip.equalsIgnoreCase(thisMatch.getZip())) {
-				System.out.println(thisMatch.returnSingleContact());
+				System.out.println(thisMatch.toString());
 				matchCount = matchCount + 1;
 			}
 			i++;
