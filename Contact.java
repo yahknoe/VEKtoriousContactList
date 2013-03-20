@@ -69,7 +69,7 @@ public class Contact implements Serializable, Comparable<Contact> { // EM, KZ
 	/*
 	 * Method to return all information for a single contact
 	 */
-	public String returnSingleContact() { // KZ, EM
+	public String toString() { // KZ, EM
 		System.out
 				.println(" - @ - Class Contact: METHOD printSingleContact: Print out complete contact");
 		return "Contact: " + lastName + ", " + firstName + "\n         "
