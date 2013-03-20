@@ -91,8 +91,7 @@ public class Contact implements Serializable, Comparable<Contact> { // EM, KZ
 	 */
 	public String getFromUserLastName() { // EM, KZ
 		lastName = "";
-		while (lastName.equals("")) { // KZ - Added loop not allowing empty last
-										// name
+		while (lastName.equals("")) { // KZ - Added loop not allowing empty last name
 			Scanner reader = new Scanner(System.in);
 			System.out.print("Last Name: ");
 			lastName = reader.nextLine();
@@ -106,7 +105,7 @@ public class Contact implements Serializable, Comparable<Contact> { // EM, KZ
 	}
 
 	/*
-	 * Method to get previously-set last name
+	 * Method to get previously-set last name --VP
 	 */
 	public String getLastName() {
 		return lastName;
@@ -122,7 +121,7 @@ public class Contact implements Serializable, Comparable<Contact> { // EM, KZ
 	/*
 	 * Method to get first name from user
 	 */
-	public String getFromUserFirstName() { // EM, KZ
+	public String getFromUserFirstName() { // EM, KZ, VP
 		Scanner reader = new Scanner(System.in);
 		System.out.print("First Name: ");
 		firstName = reader.nextLine();
@@ -130,7 +129,7 @@ public class Contact implements Serializable, Comparable<Contact> { // EM, KZ
 	}
 
 	/*
-	 * Method to get previously-set first name
+	 * Method to get previously-set first name --VP
 	 */
 	public String getFirstName() {
 		return firstName;
@@ -154,7 +153,7 @@ public class Contact implements Serializable, Comparable<Contact> { // EM, KZ
 	}
 
 	/*
-	 * Method to get previously-set street address
+	 * Method to get previously-set street address --VP
 	 */
 	public String getStreet() {
 		return street;
@@ -178,7 +177,7 @@ public class Contact implements Serializable, Comparable<Contact> { // EM, KZ
 	}
 
 	/*
-	 * Method to get previously-set city address
+	 * Method to get previously-set city address --VP
 	 */
 	public String getCity() {
 		return city;
@@ -202,7 +201,7 @@ public class Contact implements Serializable, Comparable<Contact> { // EM, KZ
 	}
 
 	/*
-	 * Method to get previously-set state
+	 * Method to get previously-set state --VP
 	 */
 	public String getState() {
 		return state;
@@ -226,7 +225,7 @@ public class Contact implements Serializable, Comparable<Contact> { // EM, KZ
 	}
 
 	/*
-	 * Method to get previously-set zip code
+	 * Method to get previously-set zip code --VP
 	 */
 	public String getZip() {
 		return zip;
@@ -261,7 +260,7 @@ public class Contact implements Serializable, Comparable<Contact> { // EM, KZ
 	}
 
 	/*
-	 * Method to get previously-set phone number
+	 * Method to get previously-set phone number --VP
 	 */
 	public String getPhone() {
 		return phone;
@@ -275,8 +274,7 @@ public class Contact implements Serializable, Comparable<Contact> { // EM, KZ
 	}
 
 	/*
-	 * Method to get email address from user. Method includes email validation.
-	 * // KZ
+	 * Method to get email address from user. Method includes email validation. --KZ
 	 */
 	public String getFromUserEmail() { // EM, KZ
 		final String VALID_EMAIL_PATTERN = ("[a-zA-Z0-9._-]+@[a-zA-Z0-9_-]+.[a-zA-Z]{3}"); // KZ
@@ -298,7 +296,7 @@ public class Contact implements Serializable, Comparable<Contact> { // EM, KZ
 	}
 
 	/*
-	 * Method to get previously-set email address
+	 * Method to get previously-set email address --VP
 	 */
 	public String getEmail() {
 		return email;
@@ -322,7 +320,7 @@ public class Contact implements Serializable, Comparable<Contact> { // EM, KZ
 	}
 
 	/*
-	 * Method to get previously-set notes
+	 * Method to get previously-set notes --VP
 	 */
 	public String getNotes() {
 		return notes;
@@ -339,7 +337,6 @@ public class Contact implements Serializable, Comparable<Contact> { // EM, KZ
 	/*
 	 * Class Contact implements Comparable. Method uses compareTo() to sort
 	 * entire ContactList in alphabetical order (natural order for Strings). -EM
-	 * " -- Contact: METHOD sortContact: Sort contact list in alphabetical order."
 	 */
 	public int compareTo(Contact compareContactKey) { // EM
 		String contactKey1 = ((Contact) this).getKey();
