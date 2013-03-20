@@ -184,7 +184,7 @@ public class ContactList implements Serializable { // KZ.
 		while (i < contactArrayList.size()) {
 			Contact thisMatch = new Contact();
 			thisMatch = contactArrayList.get(i);
-			if (searchLastName.equals(thisMatch.getLastName())) {
+			if (searchLastName.equalsIgnoreCase(thisMatch.getLastName())) {
 				System.out.println(thisMatch.returnSingleContact());
 				matchCount = matchCount + 1;
 			}
@@ -224,7 +224,7 @@ public class ContactList implements Serializable { // KZ.
 		while (i < contactArrayList.size()) {
 			Contact thisMatch = new Contact();
 			thisMatch = contactArrayList.get(i);
-			if (searchEmail.equals(thisMatch.getEmail())) {
+			if (searchEmail.equalsIgnoreCase(thisMatch.getEmail())) {
 				System.out.println(thisMatch.returnSingleContact());
 				matchCount = matchCount + 1;
 			}
@@ -264,7 +264,7 @@ public class ContactList implements Serializable { // KZ.
 		while (i < contactArrayList.size()) {
 			Contact thisMatch = new Contact();
 			thisMatch = contactArrayList.get(i);
-			if (searchZip.equals(thisMatch.getZip())) {
+			if (searchZip.equalsIgnoreCase(thisMatch.getZip())) {
 				System.out.println(thisMatch.returnSingleContact());
 				matchCount = matchCount + 1;
 			}
