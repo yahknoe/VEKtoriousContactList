@@ -9,46 +9,22 @@ public class TestContactList { // KZ.
 	 */
 	public static void main(String[] args) throws ClassNotFoundException, IOException { // KZ.
 
-		// create new objects to call non-static methods from
+		// create new ContactList object to call non-static methods from
 		// ContactList & Contact classes -EM
-		ContactList demoContactList; // EM
-		demoContactList = new ContactList(); // EM
-		Contact demoContact; // EM
-		demoContact = new Contact(); // EM
+		ContactList demoContactList;
+		demoContactList = new ContactList();
 		
-		//REMOVED -- this prints the memory location of the empty ArrayList... -VP
-		//System.out.println(" ** 01 - TestContactList: print demoContact");
-		//System.out.println("    demoContact: " + demoContact);
-
-		// read all contacts from disk
-		System.out.println(" ** 02 - TestContactList: demoContactList.readFile()");
-		demoContactList = demoContactList.readFile(); // KZ. read file from disk
-
-		// loop to be implemented to repeat menu until user quits
-		System.out.println(" ** 03 - TestContactList: demoContactList.menu()");
-		demoContactList.menu(); // KZ. call main menu, displays menu options
-
-		// MENU OPTIONS -- For demonstration purposes only
-		System.out.println(" ** 04 - TestContactList: REMOVED ‚Ä¢‚Ä¢¬†demoContact.readContact()");
-		// demoContact.readContact(); // EM (REMOVED AS THIS CAUSES A NEW CONTACT AFTER MENU QUIT)
-		System.out.println(" ** 05 - TestContactList: demoContact.toString()");
-		System.out.println(demoContact.toString()); // EM
-		System.out.println(" ** 06 - TestContactList: demoContactList.printList()");
-		demoContactList.printList(); // KZ.
-		System.out.println(" ** 07 - TestContactList: demoContactList.retrieveLastName()");
-		// demoContactList.retrieveLastName(); // KZ. (REMOVED AS THIS CAUSES A NEW CONTACT AFTER MENU QUIT)
-		System.out.println(" ** 08 -TestContactList: demoContactList.retrieveEmail()");
-		// demoContactList.retrieveEmail(); // KZ. (REMOVED AS THIS CAUSES A NEW CONTACT AFTER MENU QUIT)
-		System.out.println(" ** 09 -TestContactList: demoContactList.retrieveZip()");
-		// demoContactList.retrieveZip(); // KZ. (REMOVED AS THIS CAUSES A NEW CONTACT AFTER MENU QUIT)
-
-		// end of loop means user quit; save to disk
-		System.out.println(" ** 10 -TestContactList: demoContactList.writeFile()");
-		demoContactList.writeFile(demoContactList); // KZ. write changes to disk
+		//Read file to start from previous session
+		demoContactList = demoContactList.readFile(); //Comment out THIS line to create new file/contact list
+		//menu() loops until user quits
+		demoContactList.menu();                     
+		//menu() quit out of means termination of program; save to disk
+		demoContactList.writeFile(demoContactList); 
 	}
 }
 
 /*
+OUTPUT FOR TASK 3 PRESENTATION 3/19/13
 --------------------------------------------------------
 ----------------   OUTPUT TO CONSOLE:   ----------------
 --------------------------------------------------------
