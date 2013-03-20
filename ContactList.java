@@ -179,8 +179,6 @@ public class ContactList implements Serializable { // KZ.
 
 		System.out.println("Searching for last name " + searchLastName + "...");
 
-		Collections.sort(contactArrayList); // sort the ArrayList in
-											// alphabetical order by name key
 		int i = 0; // index of ArrayList
 		int matchCount = 0; // number of searchLastName matches found
 		while (i < contactArrayList.size()) {
@@ -221,8 +219,6 @@ public class ContactList implements Serializable { // KZ.
 
 		System.out.println("Searching for email " + searchEmail + "...");
 
-		Collections.sort(contactArrayList); // sort the ArrayList in
-											// alphabetical order by name key
 		int i = 0; // index of ArrayList
 		int matchCount = 0; // number of searchEmail matches found
 		while (i < contactArrayList.size()) {
@@ -263,8 +259,6 @@ public class ContactList implements Serializable { // KZ.
 
 		System.out.println("Searching for zip code " + searchZip + "...");
 
-		Collections.sort(contactArrayList); // sort the ArrayList in
-											// alphabetical order by name key
 		int i = 0; // index of ArrayList
 		int matchCount = 0; // number of searchZip matches found
 		while (i < contactArrayList.size()) {
