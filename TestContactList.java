@@ -32,7 +32,7 @@ public class TestContactList { // KZ.
 		System.out.println(" ** 04 - TestContactList: REMOVED ‚Ä¢‚Ä¢¬†demoContact.readContact()");
 		// demoContact.readContact(); // EM (REMOVED AS THIS CAUSES A NEW CONTACT AFTER MENU QUIT)
 		System.out.println(" ** 05 - TestContactList: demoContact.returnSingleContact()");
-		System.out.println(demoContact.returnSingleContact()); // EM
+		System.out.println(demoContact.toString()); // EM
 		System.out.println(" ** 06 - TestContactList: demoContactList.printList()");
 		demoContactList.printList(); // KZ.
 		System.out.println(" ** 07 - TestContactList: demoContactList.retrieveLastName()");
