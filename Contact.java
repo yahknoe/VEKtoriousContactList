@@ -57,7 +57,7 @@ public class Contact implements Serializable, Comparable<Contact> { // EM, KZ
 			thisContact.setPhone(getFromUserPhone());
 			thisContact.setNotes(getFromUserNotes());
 			System.out.println("Is this infomation correct?");
-			System.out.println(thisContact.returnSingleContact());
+			System.out.println(thisContact.toString());
 			System.out.print("Please confirm (y/n): ");
 			confirm = reader.nextLine();
 		}
