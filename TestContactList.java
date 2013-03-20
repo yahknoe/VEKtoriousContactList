@@ -19,7 +19,7 @@ public class TestContactList { // KZ.
 		//menu() loops until user quits
 		demoContactList.menu();                     
 		//menu() quit out of means termination of program; save to disk
-		demoContactList.writeFile(demoContactList); 
+		demoContactList.writeFile(); 
 	}
 }
 
