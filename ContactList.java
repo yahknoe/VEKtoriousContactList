@@ -144,10 +144,10 @@ public class ContactList implements Serializable { // KZ.
 	}
 
 	/*
-	 * Method to print entire contactArrayList in alphabetical order by last and
-	 * then first name. If contactArrayList is empty, returns a message that
-	 * informs user that there are no contacts and suggests adding a new
-	 * contact. -EM
+	 * Method to print entire contactArrayList once sorted in alphabetical order
+	 * by last and then first name. If contactArrayList is empty, returns a
+	 * message that informs user that there are no contacts and suggests adding
+	 * a new contact. -EM
 	 */
 	public void printList() { // EM
 		Collections.sort(contactArrayList);
