@@ -59,37 +59,37 @@ public class ContactList implements Serializable { // KZ.
 		while (menuChoice != 6) {
 			switch (menuChoice) {
 			case 1:
-				System.out.println("switch menuChoice: new");
+				System.out.println("\nYou have selected: (1) New contact...\n");
 				addContact();
 				break;
 			case 2:
-				System.out.println("switch menuChoice: print");
+				System.out.println("\nYou have selected: (2) Print contact list...\n");
 				printList();
 				break;
 			case 3:
-				System.out.println("switch menuChoice: last");
+				System.out.println("\nYou have selected: (3) Retrieve contact(s) by last name...\n");
 				retrieveLastName();
 				break;
 			case 4:
-				System.out.println("switch menuChoice: email");
+				System.out.println("\nYou have selected: (4) Retrieve contact(s) by email address...\n");
 				retrieveEmail();
 				break;
 			case 5:
-				System.out.println("switch menuChoice: zip");
+				System.out.println("\nYou have selected: (5) Retrieve contact(s) by zip code...\n");
 				retrieveZip();
 				break;
 			default:
 				System.out
-						.println("You have entered an invalid choice. Please re-enter your menu choice.");
+						.println("\nYou have entered an invalid choice. Please re-enter your menu choice.\n");
 				break;
 			}
 
 			menuText();
 			menuChoice = scanner.nextInt();
 		}
-
-		System.out.println("switch menuChoice: quit");
-		System.out.println("Thank you for using the contact list!");
+		scanner.close();
+		System.out.println("\nYou have selected: (6) Quit Contact List Program...");
+		System.out.println("\nThank you for using the contact list!");
 	}
 	// Notes for menu try-catch (remove for final version!). -EM, 03/18/13
 	// try {
@@ -110,10 +110,10 @@ public class ContactList implements Serializable { // KZ.
 	/*
 	 * Method to save contactArrayList object to file -VP
 	 */
-	public void writeFile(ContactList list) throws IOException {
+	public void writeFile() throws IOException {
 		FileOutputStream fos = new FileOutputStream("ContactList.sav");
 		ObjectOutputStream oos = new ObjectOutputStream(fos);
-		oos.writeObject(list);
+		oos.writeObject(this);
 		oos.close();
 	}
 
