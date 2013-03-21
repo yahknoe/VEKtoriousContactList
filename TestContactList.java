@@ -1,8 +1,94 @@
 import java.io.IOException; //IOException for reading/writing
+import java.util.Scanner;
+
 /*
  * Create, manipulate, and access contacts in contact list
  */
 public class TestContactList { // KZ.
+
+	/*
+	 * Method menuText: Menu text for contact list
+	 */
+	private static void menuText() { // KZ
+		System.out
+				.println("--------------------------------------------------------");
+		System.out
+				.println("--------------------   MAIN MENU:   --------------------");
+		System.out
+				.println("--------------------------------------------------------");
+		System.out.println("        (1) New contact");
+		System.out.println("        (2) Print contact list");
+		System.out.println("        (3) Retrieve contact(s) by last name");
+		System.out.println("        (4) Retrieve contact(s) by email address");
+		System.out.println("        (5) Retrieve contact(s) by zip code");
+		System.out.println("        (6) Quit Contact List Program");
+		System.out
+				.println("--------------------------------------------------------");
+		System.out
+				.print("  What would you like to do? (Enter option from above): ");
+	}
+
+	/*
+	 * METHOD menu: Scan for menu options choice from user and execute options
+	 */
+	public static void menu(ContactList l) { // KZ
+		System.out
+				.println("--------------------------------------------------------");
+		System.out
+				.println("--- Welcome to the Quality Soft Contact List Program ---");
+
+		menuText();
+
+		int menuChoice = 0;
+		Scanner scanner = new Scanner(System.in);
+		menuChoice = scanner.nextInt();
+
+		while (menuChoice != 6) {
+			switch (menuChoice) {
+			case 1:
+				System.out.println("\nYou have selected: (1) New contact...\n");
+				l.addContact();
+				break;
+			case 2:
+				System.out
+						.println("\nYou have selected: (2) Print contact list...\n");
+				l.printList();
+				break;
+			case 3:
+				System.out
+						.println("\nYou have selected: (3) Retrieve contact(s) by last name...\n");
+				l.retrieveLastName();
+				break;
+			case 4:
+				System.out
+						.println("\nYou have selected: (4) Retrieve contact(s) by email address...\n");
+				l.retrieveEmail();
+				break;
+			case 5:
+				System.out
+						.println("\nYou have selected: (5) Retrieve contact(s) by zip code...\n");
+				l.retrieveZip();
+				break;
+			default:
+				System.out
+						.println("\nYou have entered an invalid choice. Please re-enter your menu choice.\n");
+				break;
+			}
+
+			menuText();
+			menuChoice = scanner.nextInt();
+		}
+		System.out
+				.println("\nYou have selected: (6) Quit Contact List Program...");
+		System.out.println("\nThank you for using the Contact List!");
+	}
+
+	// Notes for menu try-catch (remove for final version!). -EM, 03/18/13
+	// try {
+	// } catch (InputMismatchException e){
+	// System.out
+	// .println("You have entered an invalid choice. Please enter a menu choice from 1 to 6.");
+	// }
 
 	/*
 	 * ---------- MAIN ----------
@@ -13,13 +99,13 @@ public class TestContactList { // KZ.
 		// ContactList & Contact classes -EM
 		ContactList demoContactList;
 		demoContactList = new ContactList();
-		
-		//Read file to start from previous session
+
+		// Read file to start from previous session
 		demoContactList = demoContactList.readFile();
-		//menu() loops until user quits
-		demoContactList.menu();                     
-		//menu() quit out of means termination of program; save to disk
-		demoContactList.writeFile(); 
+		// menu() loops until user quits
+		menu(demoContactList);
+		// menu() quit out of means termination of program; save to disk
+		demoContactList.writeFile();
 	}
 }
 
