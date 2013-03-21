@@ -87,7 +87,6 @@ public class ContactList implements Serializable { // KZ.
 			menuText();
 			menuChoice = scanner.nextInt();
 		}
-		scanner.close();
 		System.out.println("\nYou have selected: (6) Quit Contact List Program...");
 		System.out.println("\nThank you for using the contact list!");
 	}
