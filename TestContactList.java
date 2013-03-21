@@ -15,7 +15,12 @@ public class TestContactList { // KZ.
 		demoContactList = new ContactList();
 		
 		//Read file to start from previous session
-		demoContactList = demoContactList.readFile(); //Comment out THIS line to create new file/contact list
+		try { //try to read file
+			demoContactList = demoContactList.readFile();
+		}
+		catch (NullPointerException n) { //if no data present, start new data
+			System.out.println("No data present, starting a new Contact List...\n");
+		}
 		//menu() loops until user quits
 		demoContactList.menu();                     
 		//menu() quit out of means termination of program; save to disk
