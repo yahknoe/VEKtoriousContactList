@@ -94,8 +94,7 @@ public class Contact implements Serializable, Comparable<Contact> { // EM, KZ
 			System.out.print("Last Name: ");
 			lastName = reader.nextLine();
 			if (lastName.equals("")) {
-				System.out
-						.println("--- You did not enter a last name. \n"
+				System.out.println("--- You did not enter a last name. \n"
 								+ "--- Please enter a valid last name to start a new contact.");
 			}
 		}
@@ -241,16 +240,18 @@ public class Contact implements Serializable, Comparable<Contact> { // EM, KZ
 	 * validation. // KZ
 	 */
 	public String getFromUserPhone() { // KZ, EM, KZ
+		boolean status = true;
 		final String VALID_PHONE_NUMBER_PATTERN = "[0-9]{3}-[0-9]{3}-[0-9]{4}"; // KZ
-		while (true) {
+		while (status) {
 			Scanner reader = new Scanner(System.in);
 			System.out.print("Phone Number: ");
 			phone = reader.nextLine();
-			if (phone.matches(VALID_PHONE_NUMBER_PATTERN)) {
-				break;
+			if (email.equals(""))	{
+				status = false;
+			} else if (phone.matches(VALID_PHONE_NUMBER_PATTERN)) {
+				status = false;
 			} else {
-				System.out
-						.println("--- You did not enter a valid US phone number. \n"
+				System.out.println("--- You did not enter a valid US phone number. \n"
 								+ "--- Please enter a phone number in the following format: XXX-XXX-XXXX.");
 			}
 		}
@@ -275,16 +276,18 @@ public class Contact implements Serializable, Comparable<Contact> { // EM, KZ
 	 * Method to get email address from user. Method includes email validation. --KZ
 	 */
 	public String getFromUserEmail() { // EM, KZ
+		boolean status = true;
 		final String VALID_EMAIL_PATTERN = ("[a-zA-Z0-9._-]+@[a-zA-Z0-9_-]+.[a-zA-Z]{3}"); // KZ
-		while (true) {
+		while (status) {
 			Scanner reader = new Scanner(System.in);
 			System.out.print("Email Address: ");
 			email = reader.nextLine();
-			if (email.matches(VALID_EMAIL_PATTERN)) {
-				break;
+			if (email.equals(""))	{
+				status = false;
+			} else if (email.matches(VALID_EMAIL_PATTERN)) {
+				status = false;
 			} else {
-				System.out
-						.println("--- You did not enter a valid email address. \n"
+				System.out.println("--- You did not enter a valid email address. \n"
 								+ "--- Please enter a email address in the following format: \n"
 								+ "         yoururl_01@somplace.xxx \n"
 								+ "    or   your.url_02@somplace.xxx \n");
