@@ -246,7 +246,7 @@ public class Contact implements Serializable, Comparable<Contact> { // EM, KZ
 			Scanner reader = new Scanner(System.in);
 			System.out.print("Phone Number: ");
 			phone = reader.nextLine();
-			if (email.equals(""))	{
+			if (email.trim().equals(""))	{
 				status = false;
 			} else if (phone.matches(VALID_PHONE_NUMBER_PATTERN)) {
 				status = false;
@@ -255,7 +255,7 @@ public class Contact implements Serializable, Comparable<Contact> { // EM, KZ
 								+ "--- Please enter a phone number in the following format: XXX-XXX-XXXX.");
 			}
 		}
-		return phone;
+		return phone.trim();
 	}
 
 	/*
@@ -282,7 +282,7 @@ public class Contact implements Serializable, Comparable<Contact> { // EM, KZ
 			Scanner reader = new Scanner(System.in);
 			System.out.print("Email Address: ");
 			email = reader.nextLine();
-			if (email.equals(""))	{
+			if (email.trim().equals(""))	{
 				status = false;
 			} else if (email.matches(VALID_EMAIL_PATTERN)) {
 				status = false;
@@ -293,7 +293,7 @@ public class Contact implements Serializable, Comparable<Contact> { // EM, KZ
 								+ "    or   your.url_02@somplace.xxx \n");
 			}
 		}
-		return email;
+		return email.trim();
 	}
 
 	/*
