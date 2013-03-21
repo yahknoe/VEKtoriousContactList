@@ -88,7 +88,7 @@ public class ContactList implements Serializable { // KZ.
 			menuChoice = scanner.nextInt();
 		}
 		System.out.println("\nYou have selected: (6) Quit Contact List Program...");
-		System.out.println("\nThank you for using the contact list!");
+		System.out.println("\nThank you for using the Contact List!");
 	}
 	// Notes for menu try-catch (remove for final version!). -EM, 03/18/13
 	// try {
@@ -103,20 +103,21 @@ public class ContactList implements Serializable { // KZ.
 	public ContactList readFile() throws IOException, ClassNotFoundException, NullPointerException {
 		FileInputStream fis = null;
 		ObjectInputStream ois = null;
+		ContactList list = new ContactList();
 		try {
 			fis = new FileInputStream("ContactList.sav");
 			ois = new ObjectInputStream(fis);
 			return (ContactList) ois.readObject();
 		}
 		catch (IOException e) {
-			System.out.println("Searching for \"ContactList.sav\"...");
+			System.out.println("No data present, starting new Contact List...");
 		}
 		finally {
 			if (ois != null) {
 				ois.close();
 			}
 		}
-		return (ContactList) ois.readObject();
+		return list;
 	}
 
 	/*
