@@ -62,7 +62,7 @@ public class Contact implements Serializable, Comparable<Contact> { // EM, KZ
 			System.out.print("Please confirm (y/n): ");
 			confirm = reader.nextLine();
 		}
-		while (!confirm.equals("y"));
+		while (!confirm.equalsIgnoreCase("y"));
 		System.out.println("Added to Contact List...");
 		return thisContact;
 	}
