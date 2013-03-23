@@ -1,7 +1,7 @@
 import java.util.Scanner; //for user input
 import java.io.Serializable; //to write objects to file
 
-/*
+/**
  * One object of this class represents a single contact, including first name,
  * last name, street address, city, state, zip code, email address, phone
  * number, and notes.
@@ -18,13 +18,14 @@ public class Contact implements Serializable, Comparable<Contact> { // EM, KZ
 	private String email;
 	private String phone;
 	private String notes;
-	private String key; // key for sorting Contacts EM
+	private String sortKey; // key for sorting Contacts EM
 
 	// Constructor with no parameters
 	public Contact() {
 	}
 
 	// Constructor with params for TESTING!
+	// ??????? DO WE REMOVE THIS ??????????????????????????????????????????????????
 	public Contact(String last, String first, String st, String thisCity,
 			String thisState, String thisZip, String thisEmail,
 			String phoneNum, String theNotes) {
@@ -39,8 +40,8 @@ public class Contact implements Serializable, Comparable<Contact> { // EM, KZ
 		notes = theNotes;
 	}
 
-	/*
-	 * Method to create a single contact and set values
+	/**
+	 * METHOD: to create a single contact and set values
 	 */
 	public Contact readContact() { // KZ. VP
 		Contact thisContact = new Contact();
@@ -66,8 +67,8 @@ public class Contact implements Serializable, Comparable<Contact> { // EM, KZ
 		return thisContact;
 	}
 
-	/*
-	 * Method to return all information for a single contact
+	/**
+	 * METHOD: to return all information for a single contact
 	 */
 	public String toString() { // KZ, EM
 		return "Contact: " + lastName + ", " + firstName + "\n         "
@@ -76,16 +77,9 @@ public class Contact implements Serializable, Comparable<Contact> { // EM, KZ
 				+ notes;
 	}
 
-	/*
-	 * Method to set last name
-	 */
-	public void setLastName(String lN) { // KZ, EM
-		lastName = lN;
-	}
-
-	/*
-	 * Method to get last name from user. Method does not allow for no last
-	 * name. // KZ
+	/**
+	 * METHOD: to get last name from user. User must enter last name 
+	 * to continue name. // KZ
 	 */
 	public String getFromUserLastName() { // EM, KZ
 		lastName = "";
@@ -101,22 +95,23 @@ public class Contact implements Serializable, Comparable<Contact> { // EM, KZ
 		return lastName;
 	}
 
-	/*
-	 * Method to get previously-set last name --VP
+	/**
+	 * METHOD: to set last name
+	 */
+	public void setLastName(String lN) { // KZ, EM
+		lastName = lN;
+	}
+
+	/**
+	 * METHOD: to get previously-set last name --VP
+	 * used for retrieve/sort.
 	 */
 	public String getLastName() {
 		return lastName;
 	}
 
-	/*
-	 * Method to set first name
-	 */
-	public void setFirstName(String fN) { // KZ, EM
-		firstName = fN;
-	}
-
-	/*
-	 * Method to get first name from user
+	/**
+	 * METHOD: to get first name from user
 	 */
 	public String getFromUserFirstName() { // EM, KZ, VP
 		Scanner reader = new Scanner(System.in);
@@ -125,22 +120,23 @@ public class Contact implements Serializable, Comparable<Contact> { // EM, KZ
 		return firstName;
 	}
 
-	/*
-	 * Method to get previously-set first name --VP
+	/**
+	 * METHOD: to set first name
+	 */
+	public void setFirstName(String fN) { // KZ, EM
+		firstName = fN;
+	}
+
+	/**
+	 * METHOD: to get previously-set first name --VP
+	 * used for retrieve/sort.
 	 */
 	public String getFirstName() {
 		return firstName;
 	}
 
-	/*
-	 * Method to set street address
-	 */
-	public void setStreet(String s) { // KZ, EM
-		street = s;
-	}
-
-	/*
-	 * Method to get street address from user
+	/**
+	 * METHOD: to get street address from user
 	 */
 	public String getFromUserStreet() { // EM, KZ
 		Scanner reader = new Scanner(System.in);
@@ -149,22 +145,23 @@ public class Contact implements Serializable, Comparable<Contact> { // EM, KZ
 		return street;
 	}
 
-	/*
-	 * Method to get previously-set street address --VP
+	/**
+	 * METHOD: to set street address
+	 */
+	public void setStreet(String s) { // KZ, EM
+		street = s;
+	}
+
+	// ??????? DO WE REMOVE THIS ??????????????????????????????????????????????????
+	/**
+	 * METHOD: to get previously-set street address --VP
 	 */
 	public String getStreet() {
 		return street;
 	}
 
-	/*
-	 * Method to set city address
-	 */
-	public void setCity(String c) { // KZ, EM
-		city = c;
-	}
-
-	/*
-	 * Method to get city address from user
+	/**
+	 * METHOD: to get city address from user
 	 */
 	public String getFromUserCity() { // EM, KZ
 		Scanner reader = new Scanner(System.in);
@@ -173,22 +170,23 @@ public class Contact implements Serializable, Comparable<Contact> { // EM, KZ
 		return city;
 	}
 
-	/*
-	 * Method to get previously-set city address --VP
+	/**
+	 * METHOD: to set city address
+	 */
+	public void setCity(String c) { // KZ, EM
+		city = c;
+	}
+
+	// ??????? DO WE REMOVE THIS ??????????????????????????????????????????????????
+	/**
+	 * METHOD: to get previously-set city address --VP
 	 */
 	public String getCity() {
 		return city;
 	}
 
-	/*
-	 * Method to set state
-	 */
-	public void setState(String s) { // KZ, EM
-		state = s;
-	}
-
-	/*
-	 * Method to get state from user
+	/**
+	 * METHOD: to get state from user
 	 */
 	public String getFromUserState() { // EM, KZ
 		Scanner reader = new Scanner(System.in);
@@ -197,22 +195,23 @@ public class Contact implements Serializable, Comparable<Contact> { // EM, KZ
 		return state;
 	}
 
-	/*
-	 * Method to get previously-set state --VP
+	/**
+	 * METHOD: to set state
+	 */
+	public void setState(String s) { // KZ, EM
+		state = s;
+	}
+
+	// ??????? DO WE REMOVE THIS ??????????????????????????????????????????????????
+	/**
+	 * METHOD: to get previously-set state --VP
 	 */
 	public String getState() {
 		return state;
 	}
 
-	/*
-	 * Method to set zip code
-	 */
-	public void setZip(String z) { // KZ, EM
-		zip = z;
-	}
-
-	/*
-	 * Method to get zip code from user
+	/**
+	 * METHOD: to get zip code from user
 	 */
 	public String getFromUserZip() { // EM, KZ
 		Scanner reader = new Scanner(System.in);
@@ -221,22 +220,23 @@ public class Contact implements Serializable, Comparable<Contact> { // EM, KZ
 		return zip;
 	}
 
-	/*
-	 * Method to get previously-set zip code --VP
+	/**
+	 * METHOD: to set zip code
+	 */
+	public void setZip(String z) { // KZ, EM
+		zip = z;
+	}
+
+	/**
+	 * METHOD: to get previously-set zip code --VP
+	 * used for retrieve/sort.
 	 */
 	public String getZip() {
 		return zip;
 	}
 
-	/*
-	 * Method to set phone number
-	 */
-	public void setPhone(String p) { // KZ, EM
-		phone = p;
-	}
-
-	/*
-	 * Method to get phone number from user. Method includes phone number
+	/**
+	 * METHOD: to get phone number from user. Method includes phone number
 	 * validation. // KZ
 	 */
 	public String getFromUserPhone() { // KZ, EM, KZ
@@ -258,22 +258,23 @@ public class Contact implements Serializable, Comparable<Contact> { // EM, KZ
 		return phone.trim();
 	}
 
-	/*
-	 * Method to get previously-set phone number --VP
+	/**
+	 * METHOD: to set phone number
+	 */
+	public void setPhone(String p) { // KZ, EM
+		phone = p;
+	}
+
+	/**
+	 * METHOD: to get previously-set phone number --VP
+	 * used for retrieve/sort.
 	 */
 	public String getPhone() {
 		return phone;
 	}
 
-	/*
-	 * Method to set email address
-	 */
-	public void setEmail(String e) { // KZ, EM
-		email = e;
-	}
-
-	/*
-	 * Method to get email address from user. Method includes email validation. --KZ
+	/**
+	 * METHOD: to get email address from user. Method includes email validation. --KZ
 	 */
 	public String getFromUserEmail() { // EM, KZ
 		boolean status = true;
@@ -296,22 +297,23 @@ public class Contact implements Serializable, Comparable<Contact> { // EM, KZ
 		return email.trim();
 	}
 
-	/*
-	 * Method to get previously-set email address --VP
+	/**
+	 * METHOD: to set email address
+	 */
+	public void setEmail(String e) { // KZ, EM
+		email = e;
+	}
+
+	/**
+	 * METHOD: to get previously-set email address --VP
+	 * used for retrieve/sort.
 	 */
 	public String getEmail() {
 		return email;
 	}
 
-	/*
-	 * Method to set notes
-	 */
-	public void setNotes(String n) { // KZ, EM
-		notes = n;
-	}
-
-	/*
-	 * Method to get notes from user
+	/**
+	 * METHOD: to get notes from user
 	 */
 	public String getFromUserNotes() { // EM, KZ
 		Scanner reader = new Scanner(System.in);
@@ -320,22 +322,30 @@ public class Contact implements Serializable, Comparable<Contact> { // EM, KZ
 		return notes;
 	}
 
-	/*
-	 * Method to get previously-set notes --VP
+	/**
+	 * METHOD: to set notes
+	 */
+	public void setNotes(String n) { // KZ, EM
+		notes = n;
+	}
+
+	// ??????? DO WE REMOVE THIS ??????????????????????????????????????????????????
+	/**
+	 * METHOD: to get previously-set notes --VP
 	 */
 	public String getNotes() {
 		return notes;
 	}
 
-	/*
-	 * Getter method for key by which to sort Contact objects. -EM
+	/**
+	 * METHOD: getter for key by which to sort Contact objects. -EM
 	 */
 	public String getKey() { // EM
-		key = lastName + ", " + firstName;
-		return key;
+		sortKey = lastName + ", " + firstName;
+		return sortKey;
 	}
 
-	/*
+	/**
 	 * Class Contact implements Comparable. Method uses compareTo() to sort
 	 * entire ContactList in alphabetical order (natural order for Strings). -EM
 	 */
