@@ -1,34 +1,29 @@
 import java.io.IOException; //IOException for reading/writing
 import java.util.Scanner;
 
-/*
+/**
  * Create, manipulate, and access contacts in contact list
  */
 public class TestContactList { // KZ.
 
-	/*
-	 * Method menuText: Menu text for contact list
+	/**
+	 * METHOD menuText: Menu text for contact list
 	 */
 	private static void menuText() { // KZ
-		System.out
-				.println("--------------------------------------------------------");
-		System.out
-				.println("--------------------   MAIN MENU:   --------------------");
-		System.out
-				.println("--------------------------------------------------------");
-		System.out.println("        (1) New contact");
-		System.out.println("        (2) Print contact list");
-		System.out.println("        (3) Retrieve contact(s) by last name");
-		System.out.println("        (4) Retrieve contact(s) by email address");
-		System.out.println("        (5) Retrieve contact(s) by zip code");
-		System.out.println("        (6) Quit Contact List Program");
-		System.out
-				.println("--------------------------------------------------------");
-		System.out
-				.print("  What would you like to do? (Enter option from above): ");
+		System.out.println("--------------------------------------------------------");
+		System.out.println("--------------------   MAIN MENU:   --------------------");
+		System.out.println("--------------------------------------------------------");
+		System.out.println("\t(1) New contact");
+		System.out.println("\t(2) Print contact list");
+		System.out.println("\t(3) Retrieve contact(s) by last name");
+		System.out.println("\t(4) Retrieve contact(s) by email address");
+		System.out.println("\t(5) Retrieve contact(s) by zip code");
+		System.out.println("\t(6) Quit Contact List Program");
+		System.out.println("--------------------------------------------------------");
+		System.out.print("What would you like to do? (Enter option from above): ");
 	}
 
-	/*
+	/**
 	 * METHOD menu: Scan for menu options choice from user and execute options
 	 */
 	public static void menu(ContactList l) { // KZ
@@ -38,16 +33,16 @@ public class TestContactList { // KZ.
 		String stringMenuChoice;
 		char charMenuChoice;
 		Scanner scanner = new Scanner(System.in);
-		
+
 		do {
 			menuText();
 			stringMenuChoice = scanner.nextLine().trim();
-			
+
 			if (stringMenuChoice.length() == 1)                //if input length is 1
 				charMenuChoice = stringMenuChoice.charAt(0);   //set menu choice to input
 			else 
 				charMenuChoice = '_';                          //else set to invalid char for error message
-			
+
 			switch (charMenuChoice) {
 			case '1':
 				System.out.println("\nYou have selected: (1) New contact...\n");
@@ -77,11 +72,12 @@ public class TestContactList { // KZ.
 			}
 		}
 		while (charMenuChoice != '6');
+		
 		System.out.println("\nYou have selected: (6) Quit Contact List Program...");
 		System.out.println("\nThank you for using the Contact List!");
 	}
 
-	/*
+	/**
 	 * ---------- MAIN ----------
 	 */
 	public static void main(String[] args) throws ClassNotFoundException, IOException { // KZ.
@@ -100,17 +96,12 @@ public class TestContactList { // KZ.
 	}
 }
 
-/*
+/**
 OUTPUT FOR TASK 3 PRESENTATION 3/19/13
 --------------------------------------------------------
 ----------------   OUTPUT TO CONSOLE:   ----------------
 --------------------------------------------------------
- ** 01 - TestContactList: print demoContact
-    demoContact: Contact@f7e6a96
- ** 02 - TestContactList: demoContactList.readFile()
- -- ContactList: METHOD readFile: Read Contact objects from saved file 
-    and add to contactArrayList()
- ** 03 - TestContactList: demoContactList.menu()
+ 
 --------------------------------------------------------
 --- Welcome to the Quality Soft Contact List Program ---
 --------------------------------------------------------
@@ -123,7 +114,7 @@ OUTPUT FOR TASK 3 PRESENTATION 3/19/13
         (5) Retrieve contact(s) by zip code
         (6) Quit Contact List Program
 --------------------------------------------------------
-  What would you like to do? (Enter option from above): 1
+What would you like to do? (Enter option from above): 1
 Last Name: Ayoub
 First Name: Abil
 Street Address: 2184 Peachtree Ln
@@ -134,7 +125,6 @@ Email Address: asmanghori@gmail.com
 Phone Number: 408-836-1742
 Notes: Ayoub by any other name
 Is this infomation correct?
- - @ - Class Contact: METHOD printSingleContact: Print out complete contact
 Contact: Ayoub, Abil
          2184 Peachtree Ln
          San Jose, CA 95128
@@ -153,7 +143,7 @@ Added to Contact List...
         (5) Retrieve contact(s) by zip code
         (6) Quit Contact List Program
 --------------------------------------------------------
-  What would you like to do? (Enter option from above): 1
+What would you like to do? (Enter option from above): 1
 switch menuChoice: new
 Last Name: Smith
 First Name: Edward 
@@ -165,7 +155,6 @@ Email Address: edsmith@yahoo.com
 Phone Number: 650-322-2462
 Notes: The most dull of fellows
 Is this infomation correct?
- - @ - Class Contact: METHOD printSingleContact: Print out complete contact
 Contact: Smith, Edward 
          1045 Hutchinson Ave.
          Palo Alto, CA 94301
@@ -184,16 +173,14 @@ Added to Contact List...
         (5) Retrieve contact(s) by zip code
         (6) Quit Contact List Program
 --------------------------------------------------------
-  What would you like to do? (Enter option from above): 2
+What would you like to do? (Enter option from above): 2
 switch menuChoice: print
- - @ - Class Contact: METHOD printSingleContact: Print out complete contact
 Contact: Ayoub, Abil
          2184 Peachtree Ln
          San Jose, CA 95128
          asmanghori@gmail.com
          408-836-1742
          Ayoub by any other name
- - @ - Class Contact: METHOD printSingleContact: Print out complete contact
 Contact: Smith, Edward 
          1045 Hutchinson Ave.
          Palo Alto, CA 94301
@@ -210,7 +197,7 @@ Contact: Smith, Edward
         (5) Retrieve contact(s) by zip code
         (6) Quit Contact List Program
 --------------------------------------------------------
-  What would you like to do? (Enter option from above): 1
+What would you like to do? (Enter option from above): 1
 switch menuChoice: new
 Last Name: Smith
 First Name: Tabitha
@@ -222,7 +209,6 @@ Email Address: tabsmith@yahoo.com
 Phone Number: 650-322-2462
 Notes: Well-matched to that dull fellow
 Is this infomation correct?
- - @ - Class Contact: METHOD printSingleContact: Print out complete contact
 Contact: Smith, Tabitha
          1045 Hutchinson Ave.
          Palo Alto, CA 94301
@@ -241,18 +227,16 @@ Added to Contact List...
         (5) Retrieve contact(s) by zip code
         (6) Quit Contact List Program
 --------------------------------------------------------
-  What would you like to do? (Enter option from above): 3
+What would you like to do? (Enter option from above): 3
 switch menuChoice: last
 Last name to search for: Smith
 Searching for last name Smith...
- - @ - Class Contact: METHOD printSingleContact: Print out complete contact
 Contact: Smith, Edward 
          1045 Hutchinson Ave.
          Palo Alto, CA 94301
          edsmith@yahoo.com
          650-322-2462
          The most dull of fellows
- - @ - Class Contact: METHOD printSingleContact: Print out complete contact
 Contact: Smith, Tabitha
          1045 Hutchinson Ave.
          Palo Alto, CA 94301
@@ -271,11 +255,10 @@ Contact: Smith, Tabitha
         (5) Retrieve contact(s) by zip code
         (6) Quit Contact List Program
 --------------------------------------------------------
-  What would you like to do? (Enter option from above): 4
+What would you like to do? (Enter option from above): 4
 switch menuChoice: email
 Email to search for: asmanghori@gmail.com
 Searching for email asmanghori@gmail.com...
- - @ - Class Contact: METHOD printSingleContact: Print out complete contact
 Contact: Ayoub, Abil
          2184 Peachtree Ln
          San Jose, CA 95128
@@ -294,7 +277,7 @@ Contact: Ayoub, Abil
         (5) Retrieve contact(s) by zip code
         (6) Quit Contact List Program
 --------------------------------------------------------
-  What would you like to do? (Enter option from above): 5
+What would you like to do? (Enter option from above): 5
 switch menuChoice: zip
 Zip code to search for: 94041
 Searching for zip code 94041...
@@ -310,7 +293,7 @@ Sorry, there are no contacts with zip code 94041 in the Contact List.
         (5) Retrieve contact(s) by zip code
         (6) Quit Contact List Program
 --------------------------------------------------------
-  What would you like to do? (Enter option from above): 94301
+What would you like to do? (Enter option from above): 94301
 You have entered an invalid choice. Please re-enter your menu choice.
 --------------------------------------------------------
 --------------------   MAIN MENU:   --------------------
@@ -322,18 +305,16 @@ You have entered an invalid choice. Please re-enter your menu choice.
         (5) Retrieve contact(s) by zip code
         (6) Quit Contact List Program
 --------------------------------------------------------
-  What would you like to do? (Enter option from above): 5
+What would you like to do? (Enter option from above): 5
 switch menuChoice: zip
 Zip code to search for: 94301
 Searching for zip code 94301...
- - @ - Class Contact: METHOD printSingleContact: Print out complete contact
 Contact: Smith, Edward 
          1045 Hutchinson Ave.
          Palo Alto, CA 94301
          edsmith@yahoo.com
          650-322-2462
          The most dull of fellows
- - @ - Class Contact: METHOD printSingleContact: Print out complete contact
 Contact: Smith, Tabitha
          1045 Hutchinson Ave.
          Palo Alto, CA 94301
@@ -352,42 +333,25 @@ Contact: Smith, Tabitha
         (5) Retrieve contact(s) by zip code
         (6) Quit Contact List Program
 --------------------------------------------------------
-  What would you like to do? (Enter option from above): 6
+What would you like to do? (Enter option from above): 6
 switch menuChoice: quit
 Thank you for using the contact list!
- ** 04 - TestContactList: REMOVED ‚Ä¢‚Ä¢¬†demoContact.readContact()
- ** 05 - TestContactList: demoContact.returnSingleContact()
- - @ - Class Contact: METHOD printSingleContact: Print out complete contact
-Contact: null, null
-         null
-         null, null null
-         null
-         null
-         null
- ** 06 - TestContactList: demoContactList.printList()
- - @ - Class Contact: METHOD printSingleContact: Print out complete contact
 Contact: Ayoub, Abil
          2184 Peachtree Ln
          San Jose, CA 95128
          asmanghori@gmail.com
          408-836-1742
          Ayoub by any other name
- - @ - Class Contact: METHOD printSingleContact: Print out complete contact
 Contact: Smith, Edward 
          1045 Hutchinson Ave.
          Palo Alto, CA 94301
          edsmith@yahoo.com
          650-322-2462
          The most dull of fellows
- - @ - Class Contact: METHOD printSingleContact: Print out complete contact
 Contact: Smith, Tabitha
          1045 Hutchinson Ave.
          Palo Alto, CA 94301
          tabsmith@yahoo.com
          650-322-2462
          Well-matched to that dull fellow
- ** 07 - TestContactList: demoContactList.retrieveLastName()
- ** 08 -TestContactList: demoContactList.retrieveEmail()
- ** 09 -TestContactList: demoContactList.retrieveZip()
- ** 10 -TestContactList: demoContactList.writeFile()
  */
