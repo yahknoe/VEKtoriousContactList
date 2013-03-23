@@ -10,8 +10,8 @@ import java.util.Scanner; // to get text from user
 import java.io.Serializable; //to write object to file
 import java.io.IOException; //IOException for reading/writing
 
-/*
- * Class to manage and manipulate ContactList objects
+/**
+ * CLASS to manage and manipulate ContactList objects
  */
 public class ContactList implements Serializable { // KZ.
 
@@ -19,8 +19,8 @@ public class ContactList implements Serializable { // KZ.
 	// ArrayList to store Contact objects -EM
 	public ArrayList<Contact> contactArrayList = new ArrayList<Contact>();
 
-	/*
-	 * Method to read contactArrayList object from saved file -VP
+	/**
+	 * METHOD: to read saved file into contactArrayList object -VP
 	 */
 	public ContactList readFile() throws IOException, ClassNotFoundException, NullPointerException {
 		FileInputStream fis = null;
@@ -42,8 +42,8 @@ public class ContactList implements Serializable { // KZ.
 		return list;
 	}
 
-	/*
-	 * Method to save contactArrayList object to file -VP
+	/**
+	 * METHOD: to save contactArrayList object to file -VP
 	 */
 	public void writeFile() throws IOException {
 		FileOutputStream fos = new FileOutputStream("ContactList.sav");
@@ -52,8 +52,8 @@ public class ContactList implements Serializable { // KZ.
 		oos.close();
 	}
 
-	/*
-	 * Adds Contact object to contactArrayList -VP
+	/**
+	 * METHOD: Adds Contact object to contactArrayList -VP
 	 */
 	public void addContact() {
 		Contact d = new Contact();
@@ -61,17 +61,16 @@ public class ContactList implements Serializable { // KZ.
 		contactArrayList.add(d);
 	}
 
-	// Must sortContact() exist if calling Collections.sort in printList()? -EM
-	/*
-	 * Method to sort entire contactArrayList in alphabetical order by last and
+	/**
+	 * METHOD: to sort entire contactArrayList in alphabetical order by last and
 	 * then first name. -EM
 	 */
 	public void sortContact() { // EM
 		Collections.sort(contactArrayList);
 	}
 
-	/*
-	 * Method to print entire contactArrayList once sorted in alphabetical order
+	/**
+	 * METHOD: to print entire contactArrayList once sorted in alphabetical order
 	 * by last and then first name. If contactArrayList is empty, returns a
 	 * message that informs user that there are no contacts and suggests adding
 	 * a new contact. -EM
@@ -90,8 +89,8 @@ public class ContactList implements Serializable { // KZ.
 		}
 	}
 
-	/*
-	 * Method to retrieve contact with matching last name and print to console
+	/**
+	 * METHOD: to retrieve contact with matching last name and print to console
 	 * or return error if none match. Search ArrayList for all objects with
 	 * matching lastName. Print all info for matching objects to console. If no
 	 * matches found, display message to console stating that no matches are in
@@ -130,8 +129,8 @@ public class ContactList implements Serializable { // KZ.
 		}
 	}
 
-	/*
-	 * Method to retrieve contact with matching email and print to console or
+	/**
+	 * METHOD: to retrieve contact with matching email and print to console or
 	 * return error if none match. Search ArrayList for all objects with
 	 * matching email. Print all info for matching objects to console. If no
 	 * matches found, display message to console stating that no matches are in
@@ -170,8 +169,8 @@ public class ContactList implements Serializable { // KZ.
 		}
 	}
 
-	/*
-	 * Method to retrieve contact with matching zip code and print to console or
+	/**
+	 * METHOD: to retrieve contact with matching zip code and print to console or
 	 * return error if none match. Search ArrayList for all objects with
 	 * matching zip. Print all info for matching objects to console. If no
 	 * matches found, display message to console stating that no matches are in
